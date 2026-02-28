@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bc5efg64uwy13"]
+
+[ext_resource type="PackedScene" uid="uid://c7btu0aatobc7" path="res://Models/Buildings/Long_Building_1.glb" id="1_nrjjv"]
+[ext_resource type="Material" uid="uid://bm1bsu1t1igfr" path="res://Models/Textures/Floor_tex.tres" id="2_xgbe0"]
+
+[node name="Long_Building_1" unique_id=1354406183 instance=ExtResource("1_nrjjv")]
+
+[node name="6x6 grass_001" parent="." index="0" unique_id=1111310265]
+surface_material_override/0 = ExtResource("2_xgbe0")
