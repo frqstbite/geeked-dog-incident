@@ -30,4 +30,6 @@ func _physics_process(_delta: float) -> void:
 		for body in body_list:
 			if body is Human: 
 					if body.CurrentState != Human.ManagerStates.Dead:
-						body.CurrentState = Human.ManagerStates.Dead
+						body.kill_human()
+			elif body is Player:
+				RoundManager.kill_player()

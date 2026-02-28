@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dwm3x750j20bp" path="res://scenes/npc/human.tscn" id="3_l1bgr"]
 [ext_resource type="PackedScene" uid="uid://cgt54fauo13va" path="res://scenes/debug/player.tscn" id="4_ad3ck"]
 [ext_resource type="PackedScene" uid="uid://cxxymbu1nw2ge" path="res://scenes/npc/car.tscn" id="4_bufah"]
+[ext_resource type="PackedScene" uid="uid://1y5rwjd1kuwq" path="res://scenes/collectible/geek_bar.tscn" id="5_7t8gr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a02cp"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -68,7 +69,6 @@ shape = SubResource("ConcavePolygonShape3D_go701")
 
 [node name="Human" parent="." unique_id=1742445246 instance=ExtResource("3_l1bgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5245697, -29)
-CurrentState = 0
 
 [node name="TestPlayer" parent="." unique_id=1025771593 instance=ExtResource("4_ad3ck")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -78,3 +78,6 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1
 
 [node name="Car" parent="." unique_id=905283236 instance=ExtResource("4_bufah")]
 transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, -17, 1, -44)
+
+[node name="GeekBar" parent="." unique_id=516184198 instance=ExtResource("5_7t8gr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4)

@@ -3,6 +3,7 @@ class_name Human
 
 @export var movement_speed: float = 4.0
 @onready var navigation_agent: NavigationAgent3D = get_node("NavigationAgent3D")
+@export var geek_bar_scene : PackedScene
 
 var region : NavigationRegion3D
 var player 
@@ -161,6 +162,14 @@ func is_point_on_navmesh(point : Vector3) -> bool:
 
 func get_random_vector3_at_height(height, minimum, maximum):
 	return Vector3(randf_range(minimum, maximum), height, randf_range(minimum, maximum))
+	
+func kill_human():
+	CurrentState = ManagerStates.Dead
+	var geek : RigidBody3D = geek_bar_scene.instantiate()
+	geek.position = position
+	add_sibling(geek)
+	queue_free()
+	
 	
 func choose_debug_mesh(state):
 	$WanderMesh.visible = state == ManagerStates.Wander
