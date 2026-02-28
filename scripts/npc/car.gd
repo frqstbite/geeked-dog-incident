@@ -2,9 +2,8 @@ extends Area3D
 
 var start_pos
 @export var travel_distance : float = 100.0
-@export var speed = 0.003 
 var target_pos
-var duration = 2.0 # Total seconds to take
+var duration = 5.0 # Total seconds to take
 var elapsed_time = 0.0
 
 # Called when the node enters the scene tree for the first time.
