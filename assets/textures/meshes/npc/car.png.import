@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjbvy6otmu50o"
-path.s3tc="res://.godot/imported/Dog_Texture.png-8cfa389dc272b11f4b9fb0e985ce32fe.s3tc.ctex"
+uid="uid://ifu0f2uhs382"
+path.s3tc="res://.godot/imported/car.png-040af83bf4ad67ff2ddd6bb69002a0ec.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/player/Dog_Texture.png"
-dest_files=["res://.godot/imported/Dog_Texture.png-8cfa389dc272b11f4b9fb0e985ce32fe.s3tc.ctex"]
+source_file="res://assets/textures/meshes/npc/car.png"
+dest_files=["res://.godot/imported/car.png-040af83bf4ad67ff2ddd6bb69002a0ec.s3tc.ctex"]
 
 [params]
 

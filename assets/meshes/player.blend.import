@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dsnegvf4agyux"
-path="res://.godot/imported/Dawg.blend-ecf960a2aa6c12d2c01572553621df40.scn"
+path="res://.godot/imported/player.blend-a61cb4aeab18e297ab749bdd772992bd.scn"
 
 [deps]
 
-source_file="res://assets/player/Dawg.blend"
-dest_files=["res://.godot/imported/Dawg.blend-ecf960a2aa6c12d2c01572553621df40.scn"]
+source_file="res://assets/meshes/player.blend"
+dest_files=["res://.godot/imported/player.blend-a61cb4aeab18e297ab749bdd772992bd.scn"]
 
 [params]
 

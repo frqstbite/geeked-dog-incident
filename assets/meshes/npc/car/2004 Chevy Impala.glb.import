@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://86r1ghhhsygw"
-path="res://.godot/imported/2004 Chevy Impala.glb-e974ed7346f634e69ff008980065c5bb.scn"
+path="res://.godot/imported/2004 Chevy Impala.glb-6c24b180f6c992459c68597e9e5840ef.scn"
 
 [deps]
 
-source_file="res://assets/meshes/environment/car/2004 Chevy Impala.glb"
-dest_files=["res://.godot/imported/2004 Chevy Impala.glb-e974ed7346f634e69ff008980065c5bb.scn"]
+source_file="res://assets/meshes/npc/car/2004 Chevy Impala.glb"
+dest_files=["res://.godot/imported/2004 Chevy Impala.glb-6c24b180f6c992459c68597e9e5840ef.scn"]
 
 [params]
 

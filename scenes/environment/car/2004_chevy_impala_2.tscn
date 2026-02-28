@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2m1is0op2u0m"]
 
-[ext_resource type="PackedScene" uid="uid://86r1ghhhsygw" path="res://assets/meshes/environment/car/2004 Chevy Impala.glb" id="1_8jk0u"]
-[ext_resource type="Material" uid="uid://o7lo0jixt6xv" path="res://materials/environment/car.tres" id="2_q0fhl"]
+[ext_resource type="PackedScene" uid="uid://86r1ghhhsygw" path="res://assets/meshes/npc/car/2004 Chevy Impala.glb" id="1_8jk0u"]
+[ext_resource type="Material" uid="uid://o7lo0jixt6xv" path="res://materials/npc/car.tres" id="2_q0fhl"]
 
 [node name="2004 Chevy Impala2" unique_id=1554747365 instance=ExtResource("1_8jk0u")]
 
