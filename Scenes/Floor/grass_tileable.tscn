@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://c320e6l70vem4"]
-
-[ext_resource type="PackedScene" uid="uid://xsawcq4od6qi" path="res://Models/Floor/Grass_Tileable.glb" id="1_cbiwn"]
-[ext_resource type="Material" uid="uid://bm1bsu1t1igfr" path="res://Models/Textures/Floor_tex.tres" id="2_oscd8"]
-
-[node name="Grass_Tileable" unique_id=146094085 instance=ExtResource("1_cbiwn")]
-
-[node name="grass" parent="." index="0" unique_id=1076281344]
-surface_material_override/0 = ExtResource("2_oscd8")

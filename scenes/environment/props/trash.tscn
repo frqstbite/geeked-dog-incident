@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://q85swiqrfyy"]
+
+[ext_resource type="PackedScene" uid="uid://cm0wfrplctphs" path="res://assets/meshes/environment/props/trash.glb" id="1_c0iod"]
+[ext_resource type="Material" uid="uid://bm1bsu1t1igfr" path="res://materials/environment/floor.tres" id="2_t7o6f"]
+[ext_resource type="Material" uid="uid://byvjposq5u00e" path="res://materials/environment/props.tres" id="3_11hhb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qf72q"]
+size = Vector3(0.85375977, 1.097229, 0.8076172)
+
+[node name="Prop_Trash" unique_id=782225398 instance=ExtResource("1_c0iod")]
+
+[node name="grass" parent="." index="0" unique_id=697706804]
+surface_material_override/0 = ExtResource("2_t7o6f")
+
+[node name="trash can" parent="." index="1" unique_id=117911188]
+surface_material_override/0 = ExtResource("3_11hhb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=5896729]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=313335947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.481781, 0)
+shape = SubResource("BoxShape3D_qf72q")

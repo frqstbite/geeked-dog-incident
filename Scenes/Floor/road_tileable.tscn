@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cf021kbc3na0s"]
-
-[ext_resource type="PackedScene" uid="uid://b2cla2t7i6mw7" path="res://Models/Floor/Road_Tileable.glb" id="1_gfq1v"]
-[ext_resource type="Material" uid="uid://bm1bsu1t1igfr" path="res://Models/Textures/Floor_tex.tres" id="2_y1tvy"]
-
-[node name="Road_Tileable" unique_id=110539719 instance=ExtResource("1_gfq1v")]
-
-[node name="road" parent="." index="0" unique_id=283327110]
-surface_material_override/0 = ExtResource("2_y1tvy")
