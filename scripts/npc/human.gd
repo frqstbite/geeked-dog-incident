@@ -11,7 +11,7 @@ var target : Vector3
 var MAP_SIZE
 
 # State stuff (this could be split into a seperate state machine but i am lazy)
-enum ManagerStates {Wander, Concern, Panic}
+enum ManagerStates {Wander, Concern, Panic, Dead}
 @export var CurrentState : ManagerStates = ManagerStates.Wander
 # Wander - Randomly Walk Around
 # Concern - Stop and look toward whatever chaos is going on, then after a while slowly walk away in the other direction.
@@ -159,3 +159,4 @@ func choose_debug_mesh(state):
 	$WanderMesh.visible = state == ManagerStates.Wander
 	$ConcernMesh.visible = state == ManagerStates.Concern
 	$PanicMesh.visible = state == ManagerStates.Panic
+	$DeadMesh.visible = state == ManagerStates.Dead
