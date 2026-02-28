@@ -68,7 +68,7 @@ material_override = SubResource("StandardMaterial3D_a02cp")
 shape = SubResource("ConcavePolygonShape3D_go701")
 
 [node name="Human" parent="." unique_id=1742445246 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5245697, -29)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5245697, -13)
 
 [node name="TestPlayer" parent="." unique_id=1025771593 instance=ExtResource("4_ad3ck")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

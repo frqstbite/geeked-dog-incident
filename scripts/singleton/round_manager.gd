@@ -19,9 +19,8 @@ func _process(delta: float) -> void:
 	time_elapsed += delta * geek_decay
 	
 	geek_decay = (0.01) * (pow(E, time_elapsed))
-	
 	print(geek_value)
-	
+
 func refill_geek(amount):
 	amount_refilled += amount
 

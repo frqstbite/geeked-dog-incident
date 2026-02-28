@@ -14,7 +14,7 @@ func on_consume():
 	if player:
 		if modifier:
 			player.create_speed_modifier(speed, duration)
-			RoundManager.refill_geek(geek_refill_factor)
+		RoundManager.refill_geek(geek_refill_factor)
 		
 func _on_body_entered(body: Node) -> void:
 	if body is Player:
