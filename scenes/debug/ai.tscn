@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://b411em5bsjsgt"]
 
-[ext_resource type="Script" uid="uid://7bl7vachir5e" path="res://scripts/debug/autonav.gd" id="1_bufah"]
+[ext_resource type="Script" uid="uid://bmtgju1evgvpr" path="res://scripts/debug/autonav.gd" id="1_bufah"]
 [ext_resource type="PackedScene" uid="uid://dwm3x750j20bp" path="res://scenes/npc/human.tscn" id="3_l1bgr"]
 [ext_resource type="PackedScene" uid="uid://cgt54fauo13va" path="res://scenes/debug/player.tscn" id="4_ad3ck"]
+[ext_resource type="PackedScene" uid="uid://cxxymbu1nw2ge" path="res://scenes/npc/car.tscn" id="4_bufah"]
+[ext_resource type="PackedScene" uid="uid://1y5rwjd1kuwq" path="res://scenes/collectible/geek_bar.tscn" id="5_7t8gr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a02cp"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -65,41 +67,17 @@ material_override = SubResource("StandardMaterial3D_a02cp")
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Box" unique_id=604499063]
 shape = SubResource("ConcavePolygonShape3D_go701")
 
-[node name="Box2" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1257258967]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7, 2, -7)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/Box2" unique_id=2093718839]
-material_override = SubResource("StandardMaterial3D_a02cp")
-
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Box2" unique_id=357081896]
-shape = SubResource("ConcavePolygonShape3D_go701")
-
-[node name="Box3" type="StaticBody3D" parent="NavigationRegion3D" unique_id=715839642]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, -8)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/Box3" unique_id=328520686]
-material_override = SubResource("StandardMaterial3D_a02cp")
-size = Vector3(9, 3, 3)
-
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Box3" unique_id=1776296980]
-shape = SubResource("ConcavePolygonShape3D_go701")
-
-[node name="Box4" type="StaticBody3D" parent="NavigationRegion3D" unique_id=461089940]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2, 7)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/Box4" unique_id=974908916]
-material_override = SubResource("StandardMaterial3D_a02cp")
-size = Vector3(3, 3, 12)
-
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Box4" unique_id=1920566941]
-shape = SubResource("ConcavePolygonShape3D_go701")
-
 [node name="Human" parent="." unique_id=1742445246 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.5245697, -2)
-CurrentState = 0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5245697, -13)
 
 [node name="TestPlayer" parent="." unique_id=1025771593 instance=ExtResource("4_ad3ck")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="Camera3D" type="Camera3D" parent="TestPlayer" unique_id=1614889783]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 16, 0)
+
+[node name="Car" parent="." unique_id=905283236 instance=ExtResource("4_bufah")]
+transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, -17, 1, -44)
+
+[node name="GeekBar" parent="." unique_id=516184198 instance=ExtResource("5_7t8gr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4)
