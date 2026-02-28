@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b411em5bsjsgt"]
 
+[ext_resource type="Script" uid="uid://7bl7vachir5e" path="res://Scripts/navigation_region_3d.gd" id="1_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dwm3x750j20bp" path="res://Scenes/human.tscn" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://85vdwekwsgfi" path="res://Scenes/static_nav_obstacle.tscn" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://cgt54fauo13va" path="res://Scenes/test_player.tscn" id="3_5a7ea"]
@@ -18,9 +19,8 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_a02cp"]
-vertices = PackedVector3Array(-8.75, 1, -10, -7, 1, -10, -7, 1, -43.5, -43.5, 1, -7, -10, 1, -7, -9.75, 1, -9.25, -43.5, 1, -43.5, -3.75, 1, -8.75, -3.75, 1, -7.25, 2, 1, -7.5, 2.25, 1, -10.25, -4.5, 1, -9.75, 3.25, 1, -11, 5.25, 1, -11, 5.25, 1, -43.5, 11, 1, -11, 11, 1, -43.5, 14.25, 1, -9.75, 14.25, 1, -8, 43.5, 1, -8, 13.5, 1, -10.75, 43.5, 1, -43.5, 7.75, 1, -4.75, 7.5, 1, 4, 9, 1, 4, 12.75, 1, -4.75, 10, 1, 4.75, 14.25, 1, -6.25, 10.25, 1, 7, 43.5, 1, 7, -5.25, 1, -3.75, -7, 1, -3.75, -7, 1, -0.5, -5, 1, -0.5, -3.75, 1, 7.75, 4, 1, 7.5, 4.25, 1, 4.75, -4, 1, -4.75, -3.75, 1, 0.75, 5.25, 1, 4, 3.25, 1, -4.75, 2, 1, -6, -8.75, 1, -0.5, -8.75, 1, -3.75, -10, 1, 2.75, -9.75, 1, 0.25, -9.75, 1, -4.5, -43.5, 1, 2.75, -43.5, 1, 11.5, -10, 1, 11.5, 10.25, 1, 8.75, 9.25, 1, 10, 9.25, 1, 43.5, 43.5, 1, 43.5, 4, 1, 9, -3.75, 1, 13.25, 5.25, 1, 10.25, -5.25, 1, 14.75, -7, 1, 14.75, -7, 1, 43.5, -8.75, 1, 14.75, -9.75, 1, 14, -43.5, 1, 43.5)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(0, 5, 2), PackedInt32Array(2, 5, 6), PackedInt32Array(6, 5, 3), PackedInt32Array(9, 8, 7), PackedInt32Array(7, 11, 9), PackedInt32Array(9, 11, 10), PackedInt32Array(14, 13, 12), PackedInt32Array(10, 11, 12), PackedInt32Array(12, 11, 1), PackedInt32Array(12, 1, 2), PackedInt32Array(12, 2, 14), PackedInt32Array(14, 16, 13), PackedInt32Array(13, 16, 15), PackedInt32Array(19, 18, 17), PackedInt32Array(19, 17, 20), PackedInt32Array(20, 15, 19), PackedInt32Array(19, 15, 16), PackedInt32Array(19, 16, 21), PackedInt32Array(24, 23, 22), PackedInt32Array(24, 22, 26), PackedInt32Array(26, 22, 25), PackedInt32Array(27, 18, 19), PackedInt32Array(25, 27, 26), PackedInt32Array(26, 27, 28), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 19), PackedInt32Array(31, 30, 32), PackedInt32Array(32, 30, 33), PackedInt32Array(36, 35, 34), PackedInt32Array(30, 37, 33), PackedInt32Array(33, 37, 38), PackedInt32Array(23, 39, 22), PackedInt32Array(22, 39, 40), PackedInt32Array(8, 9, 41), PackedInt32Array(8, 41, 37), PackedInt32Array(37, 41, 40), PackedInt32Array(37, 40, 38), PackedInt32Array(36, 34, 39), PackedInt32Array(39, 34, 38), PackedInt32Array(39, 38, 40), PackedInt32Array(43, 31, 42), PackedInt32Array(42, 31, 32), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 4), PackedInt32Array(4, 44, 47), PackedInt32Array(4, 47, 3), PackedInt32Array(42, 45, 43), PackedInt32Array(43, 45, 46), PackedInt32Array(47, 44, 48), PackedInt32Array(48, 44, 49), PackedInt32Array(50, 28, 29), PackedInt32Array(50, 29, 51), PackedInt32Array(51, 29, 52), PackedInt32Array(52, 29, 53), PackedInt32Array(34, 35, 54), PackedInt32Array(54, 56, 34), PackedInt32Array(34, 56, 55), PackedInt32Array(59, 58, 57), PackedInt32Array(55, 56, 57), PackedInt32Array(57, 56, 51), PackedInt32Array(57, 51, 52), PackedInt32Array(57, 52, 59), PackedInt32Array(60, 58, 59), PackedInt32Array(61, 60, 59), PackedInt32Array(61, 59, 49), PackedInt32Array(49, 59, 48), PackedInt32Array(48, 59, 62)]
 agent_radius = 1.5
+agent_max_climb = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yp4wr"]
 albedo_color = Color(0.08468992, 0.08468992, 0.08468992, 1)
@@ -37,92 +37,33 @@ environment = SubResource("Environment_5a7ea")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=508825109]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1174453549]
 navigation_mesh = SubResource("NavigationMesh_a02cp")
+script = ExtResource("1_8j60k")
 
-[node name="Ground" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1746915249]
+[node name="Ground" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1630337951]
 
-[node name="GroundCSG" type="CSGBox3D" parent="NavigationRegion3D/Ground" unique_id=1523893877]
+[node name="GroundCSG" type="CSGBox3D" parent="NavigationRegion3D/Ground" unique_id=1430617999]
 material_override = SubResource("StandardMaterial3D_yp4wr")
 size = Vector3(90, 1, 90)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Ground" unique_id=446650745]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Ground" unique_id=1798403611]
 shape = SubResource("ConcavePolygonShape3D_5a7ea")
 
 [node name="Box" parent="NavigationRegion3D" unique_id=632864689 instance=ExtResource("1_go701")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7, 2, 7)
 
-[node name="Box2" parent="NavigationRegion3D" unique_id=345832953 instance=ExtResource("1_go701")]
+[node name="Box2" parent="NavigationRegion3D" unique_id=1257258967 instance=ExtResource("1_go701")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7, 2, -7)
 
-[node name="Box3" parent="NavigationRegion3D" unique_id=917435741 instance=ExtResource("1_go701")]
+[node name="Box3" parent="NavigationRegion3D" unique_id=715839642 instance=ExtResource("1_go701")]
 transform = Transform3D(9, 0, 0, 0, 3, 0, 0, 0, 3, 8, 2, -8)
 
-[node name="Box4" parent="NavigationRegion3D" unique_id=1733735661 instance=ExtResource("1_go701")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 12, -7, 2, 7)
+[node name="Box4" parent="NavigationRegion3D" unique_id=461089940 instance=ExtResource("1_go701")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 12, -9, 2, 7)
 
 [node name="Human" parent="." unique_id=1742445246 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5245697, -15)
-CurrentState = 0
-
-[node name="Human2" parent="." unique_id=1596478589 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.5245697, -15)
-CurrentState = 0
-
-[node name="Human3" parent="." unique_id=1116999613 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1.5245697, -15)
-CurrentState = 0
-
-[node name="Human4" parent="." unique_id=2021944182 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1.5245697, -15)
-CurrentState = 0
-
-[node name="Human5" parent="." unique_id=1818333181 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1.5245697, -24)
-CurrentState = 0
-
-[node name="Human6" parent="." unique_id=1965262426 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5245697, -24)
-CurrentState = 0
-
-[node name="Human7" parent="." unique_id=1979303021 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5245697, -24)
-CurrentState = 0
-
-[node name="Human8" parent="." unique_id=981531255 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1.5245697, -24)
-CurrentState = 0
-
-[node name="Human9" parent="." unique_id=2132084737 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5245697, 30)
-CurrentState = 0
-
-[node name="Human10" parent="." unique_id=1622656856 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.5245697, 30)
-CurrentState = 0
-
-[node name="Human11" parent="." unique_id=2017281499 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1.5245697, 30)
-CurrentState = 0
-
-[node name="Human12" parent="." unique_id=1309080649 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1.5245697, 30)
-CurrentState = 0
-
-[node name="Human13" parent="." unique_id=148800784 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1.5245697, 21)
-CurrentState = 0
-
-[node name="Human14" parent="." unique_id=2054209819 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5245697, 21)
-CurrentState = 0
-
-[node name="Human15" parent="." unique_id=2077954237 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5245697, 21)
-CurrentState = 0
-
-[node name="Human16" parent="." unique_id=164036204 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1.5245697, 21)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.5245697, -2)
 CurrentState = 0
 
 [node name="TestPlayer" parent="." unique_id=1025771593 instance=ExtResource("3_5a7ea")]
