@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bc5efg64uwy13"]
+
+[ext_resource type="PackedScene" uid="uid://dojnjq4hvbib5" path="res://assets/meshes/environment/buildings/long_1.glb" id="1_x420p"]
+[ext_resource type="Material" uid="uid://bm1bsu1t1igfr" path="res://materials/environment/floor.tres" id="2_ud1a1"]
+[ext_resource type="Texture2D" uid="uid://biyervix5t530" path="res://assets/textures/meshes/environment/buildings/long_1.png" id="3_paabx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jcxj"]
+albedo_texture = ExtResource("3_paabx")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xgbe0"]
+size = Vector3(7.8183594, 6.463623, 5.9882813)
+
+[node name="Long_Building_1" unique_id=2111086352 instance=ExtResource("1_x420p")]
+
+[node name="3x5 grass" parent="." index="0" unique_id=739119206]
+surface_material_override/0 = ExtResource("2_ud1a1")
+
+[node name="building short 1" parent="." index="1" unique_id=1871211013]
+surface_material_override/0 = SubResource("StandardMaterial3D_0jcxj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1633781708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12726651, 0, 0.07027676)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1724452361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.107544, 0)
+shape = SubResource("BoxShape3D_xgbe0")
