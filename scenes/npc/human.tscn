@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dwm3x750j20bp"]
 
-[ext_resource type="Script" uid="uid://frm4fidt7su6" path="res://Scripts/human_pathfinding.gd" id="1_byrx8"]
+[ext_resource type="Script" uid="uid://frm4fidt7su6" path="res://scripts/npc/human.gd" id="1_byrx8"]
 [ext_resource type="Texture2D" uid="uid://cxicu524r8i0r" path="res://icon.svg" id="2_j03jf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j03jf"]
