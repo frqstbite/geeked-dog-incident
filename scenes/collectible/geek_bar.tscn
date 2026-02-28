@@ -6,12 +6,23 @@
 albedo_color = Color(0.6176708, 0.5679242, 0, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_quqiw"]
-radius = 0.04
-height = 0.2
+radius = 0.08
+height = 0.4
 
-[node name="GeekBar" type="Node3D" unique_id=161614062]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xj51j"]
+radius = 0.08
+height = 0.4
+
+[node name="GeekBar" type="RigidBody3D" unique_id=516184198]
+contact_monitor = true
+max_contacts_reported = 3
 script = ExtResource("1_xj51j")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=628723338]
 material_override = SubResource("StandardMaterial3D_quqiw")
 mesh = SubResource("CapsuleMesh_quqiw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=964853759]
+shape = SubResource("CapsuleShape3D_xj51j")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
