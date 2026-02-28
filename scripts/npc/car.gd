@@ -23,7 +23,7 @@ func _process(delta):
 	if t == 1:
 		elapsed_time = 0
 		
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var body_list = get_overlapping_bodies()
 	
 	if body_list.size() > 0:
