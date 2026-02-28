@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bl8hljc00jgvl"
-path="res://.godot/imported/L_Building.glb-e4c2c9d68a01fefac431fbf900e83298.scn"
+uid="uid://b8eou8a6qasdb"
+path="res://.godot/imported/Prop_Shrub.glb-4a695773338b0f61f31d593fdc1c25c2.scn"
 
 [deps]
 
-source_file="res://Models/Buildings/L_Building.glb"
-dest_files=["res://.godot/imported/L_Building.glb-e4c2c9d68a01fefac431fbf900e83298.scn"]
+source_file="res://Models/Props/Prop_Shrub.glb"
+dest_files=["res://.godot/imported/Prop_Shrub.glb-4a695773338b0f61f31d593fdc1c25c2.scn"]
 
 [params]
 

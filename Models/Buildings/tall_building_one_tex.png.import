@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3sp55cqm3to7"
-path.s3tc="res://.godot/imported/L_Building_Untitled_1.png-bdc206ed09d702586a2c6d4404026c6e.s3tc.ctex"
+uid="uid://dvaf3wmng5ici"
+path.s3tc="res://.godot/imported/tall_building_one_tex.png-f793490636842ed237d9f2f4aa71fc68.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "5928c32d5a7b226a8c944155ce9a458b"
-}
 
 [deps]
 
-source_file="res://Models/Buildings/L_Building_Untitled_1.png"
-dest_files=["res://.godot/imported/L_Building_Untitled_1.png-bdc206ed09d702586a2c6d4404026c6e.s3tc.ctex"]
+source_file="res://Models/Buildings/tall_building_one_tex.png"
+dest_files=["res://.godot/imported/tall_building_one_tex.png-f793490636842ed237d9f2f4aa71fc68.s3tc.ctex"]
 
 [params]
 

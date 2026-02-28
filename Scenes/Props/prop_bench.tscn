@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cp0haq47ma71t"]
+
+[ext_resource type="PackedScene" uid="uid://drct4lg2glol0" path="res://Models/Props/Prop_Bench.glb" id="1_1msl4"]
+[ext_resource type="Material" uid="uid://bm1bsu1t1igfr" path="res://Models/Textures/Floor_tex.tres" id="2_2n2g0"]
+[ext_resource type="Material" uid="uid://byvjposq5u00e" path="res://Models/Textures/Prop_tex.tres" id="3_syorj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1msl4"]
+size = Vector3(0.90808105, 2.0535889, 2.5389404)
+
+[node name="Prop_Bench" unique_id=1859321305 instance=ExtResource("1_1msl4")]
+
+[node name="3x2 grass" parent="." index="0" unique_id=9256466]
+surface_material_override/0 = ExtResource("2_2n2g0")
+
+[node name="bench" parent="." index="1" unique_id=894004709]
+surface_material_override/0 = ExtResource("3_syorj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1808182422]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=629717812]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045959473, 0.52679443, -0.006926477)
+shape = SubResource("BoxShape3D_1msl4")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://5i4tfhpo2qpn"]
+
+[ext_resource type="PackedScene" uid="uid://b8eou8a6qasdb" path="res://Models/Props/Prop_Shrub.glb" id="1_k5uiv"]
+[ext_resource type="Material" uid="uid://bm1bsu1t1igfr" path="res://Models/Textures/Floor_tex.tres" id="2_v2vxk"]
+[ext_resource type="Material" uid="uid://byvjposq5u00e" path="res://Models/Textures/Prop_tex.tres" id="3_j6wfw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k5uiv"]
+size = Vector3(1.6992188, 1.3197632, 1.6386719)
+
+[node name="Prop_Shrub" unique_id=254670634 instance=ExtResource("1_k5uiv")]
+
+[node name="grass" parent="." index="0" unique_id=1823478431]
+surface_material_override/0 = ExtResource("2_v2vxk")
+
+[node name="shrub" parent="." index="1" unique_id=82454468]
+transform = Transform3D(0.9999924, 0.0033219585, -0.0020637666, -0.003318207, 0.99999285, 0.0018172027, 0.0020697922, -0.0018103363, 0.9999962, 0, 0, 0)
+surface_material_override/0 = ExtResource("3_j6wfw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=57927835]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1320934942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62612915, 0)
+shape = SubResource("BoxShape3D_k5uiv")

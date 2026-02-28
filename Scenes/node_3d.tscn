@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://s42glft7ghkp"]
+
+[ext_resource type="PackedScene" uid="uid://cp0haq47ma71t" path="res://Scenes/Props/prop_bench.tscn" id="4_wosnj"]
+[ext_resource type="PackedScene" uid="uid://1rbluhys2n3m" path="res://Scenes/Props/prop_light.tscn" id="5_t3l2h"]
+[ext_resource type="PackedScene" uid="uid://5i4tfhpo2qpn" path="res://Scenes/Props/prop_shrub.tscn" id="6_a8auw"]
+[ext_resource type="PackedScene" uid="uid://db5viuixsyl3o" path="res://Scenes/Buildings/tall_building_1.tscn" id="6_ifh66"]
+[ext_resource type="PackedScene" uid="uid://q85swiqrfyy" path="res://Scenes/Props/prop_trash.tscn" id="7_aeo3b"]
+[ext_resource type="PackedScene" uid="uid://bc5efg64uwy13" path="res://Scenes/Buildings/long_building_1.tscn" id="7_worak"]
+[ext_resource type="PackedScene" uid="uid://d1ypfatjmnv3g" path="res://Scenes/Buildings/l_building.tscn" id="8_aeo3b"]
+[ext_resource type="PackedScene" uid="uid://c4tqmh6a884hs" path="res://Scenes/Props/prop_tree.tscn" id="8_worak"]
+
+[node name="Node3D" type="Node3D" unique_id=1176179009]
+
+[node name="Prop_Bench" parent="." unique_id=1859321305 instance=ExtResource("4_wosnj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8010426, 0, 1.2193359)
+
+[node name="Prop_Light" parent="." unique_id=30113126 instance=ExtResource("5_t3l2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.102854, 0, -4.032146)
+
+[node name="Prop_Shrub2" parent="." unique_id=254670634 instance=ExtResource("6_a8auw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.273354, 0, 0.30875587)
+
+[node name="Prop_Trash" parent="." unique_id=782225398 instance=ExtResource("7_aeo3b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.223316, 0, -3.254716)
+
+[node name="Prop_Tree" parent="." unique_id=131439570 instance=ExtResource("8_worak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.210832, 0, 2.7426505)
+
+[node name="Tall_Building_1" parent="." unique_id=1146611285 instance=ExtResource("6_ifh66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9307137, 0, 10.243244)
+
+[node name="Long_Building_1" parent="." unique_id=463400681 instance=ExtResource("7_worak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9474087, 0, -0.06094861)
+
+[node name="L_Building" parent="." unique_id=983456006 instance=ExtResource("8_aeo3b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6763363, 0, -9.087956)

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c4tqmh6a884hs"]
+
+[ext_resource type="PackedScene" uid="uid://dchn3d8bbj67o" path="res://Models/Props/Prop_Tree.glb" id="1_n0lu0"]
+[ext_resource type="Material" uid="uid://bm1bsu1t1igfr" path="res://Models/Textures/Floor_tex.tres" id="2_v68v6"]
+[ext_resource type="Material" uid="uid://byvjposq5u00e" path="res://Models/Textures/Prop_tex.tres" id="3_20xce"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2b6yw"]
+size = Vector3(1, 4.4172363, 1)
+
+[node name="Prop_Tree" unique_id=131439570 instance=ExtResource("1_n0lu0")]
+
+[node name="grass" parent="." index="0" unique_id=1988884759]
+surface_material_override/0 = ExtResource("2_v68v6")
+
+[node name="tree" parent="." index="1" unique_id=1110284214]
+surface_material_override/0 = ExtResource("3_20xce")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=474433686]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=2063688896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.074958, 0)
+shape = SubResource("BoxShape3D_2b6yw")
