@@ -65,7 +65,7 @@ func wander_physics_process(delta):
 	
 	physics_movement(delta)
 	
-	if danger_position.distance_to(position) < 8:
+	if danger_position.distance_to(position) < 6:
 		set_movement_target(position)
 		CurrentState = ManagerStates.Concern 
 	
@@ -83,6 +83,9 @@ func concern_physics_process(delta):
 	if position.distance_to(danger_position) < 3:
 		CurrentState = ManagerStates.Panic
 		
+	if position.distance_to(danger_position) > 7:
+		CurrentState = ManagerStates.Wander
+		
 func panic_physics_process(delta):
 	# try your best to run in the opposite direction from the danger, if you get far enough go back to wander.
 	# for now it is going to be in a straight line
@@ -94,7 +97,7 @@ func panic_physics_process(delta):
 		return
 	if idle_frames > WAIT_FRAMES:
 		idle_frames = 0
-		set_movement_target(position + (transform.basis.z * randf_range(3, 5)))
+		set_movement_target(position)
 		return
 		
 	physics_movement(delta)
