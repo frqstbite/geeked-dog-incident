@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Human
 
 @export var movement_speed: float = 4.0
 @onready var navigation_agent: NavigationAgent3D = get_node("NavigationAgent3D")
@@ -91,6 +92,7 @@ func panic_physics_process(delta):
 	# for now it is going to be in a straight line
 	var danger_position : Vector3 = player.position
 	WAIT_FRAMES = 15
+	movement_speed = 4.0
 	
 	# check if navmesh is initialized
 	if NavigationServer3D.map_get_iteration_id(navigation_agent.get_navigation_map()) == 0:
