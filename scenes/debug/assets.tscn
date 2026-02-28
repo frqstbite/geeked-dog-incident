@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d1ypfatjmnv3g" path="res://scenes/environment/buildings/long_2.tscn" id="8_aeo3b"]
 [ext_resource type="PackedScene" uid="uid://c4tqmh6a884hs" path="res://scenes/environment/props/tree.tscn" id="8_worak"]
 [ext_resource type="PackedScene" uid="uid://b2m1is0op2u0m" path="res://scenes/environment/car/2004_chevy_impala_2.tscn" id="9_6ly4w"]
-[ext_resource type="PackedScene" uid="uid://dsnegvf4agyux" path="res://assets/player/Dawg.blend" id="10_ar60c"]
+[ext_resource type="PackedScene" uid="uid://bw17kijm22g0j" path="res://scenes/player/dawg.tscn" id="10_ar60c"]
 
 [node name="Node3D" type="Node3D" unique_id=1176179009]
 
@@ -38,7 +38,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9474087, 0, -0.06094861)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6763363, 0, -9.087956)
 
 [node name="2004 Chevy Impala2" parent="." unique_id=1554747365 instance=ExtResource("9_6ly4w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.927498, 0, 9.116945)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.969234, 0, 9.116945)
 
 [node name="Dawg" parent="." unique_id=589952143 instance=ExtResource("10_ar60c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.551706, 0, 8.998027)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.58765, 0, 8.647633)
+
+[node name="Skeleton3D" parent="Dawg/Armature" parent_id_path=PackedInt32Array(589952143, 2114945922) index="0" unique_id=1676174059]
+bones/0/position = Vector3(9.9622625e-08, 0.96203446, -0.5974563)
+bones/1/rotation = Quaternion(-0.26924223, 8.917865e-07, 2.1132615e-07, 0.9630725)
+bones/2/rotation = Quaternion(-0.40126202, 9.87404e-08, 1.2544474e-07, 0.91596335)
+bones/3/rotation = Quaternion(0.55050576, -1.2951219e-05, -8.604766e-06, 0.8348315)
+bones/5/rotation = Quaternion(0.08628865, -0.14206174, 0.4748522, 0.86422694)
+bones/6/rotation = Quaternion(-0.12602694, 0.00026425597, 0.0014061346, 0.9920258)
+bones/7/rotation = Quaternion(-0.44505787, 0.0031175406, -0.0034749743, 0.89548975)
+bones/9/rotation = Quaternion(0.08628756, 0.14206232, -0.47485214, 0.864227)
+bones/10/rotation = Quaternion(-0.12602496, -0.00026420827, -0.0014060871, 0.99202603)
+bones/11/rotation = Quaternion(-0.44505876, -0.0031174398, 0.0034749606, 0.8954893)
+bones/13/rotation = Quaternion(0.50571144, 0.5744445, 0.5013422, 0.40364048)
+bones/14/rotation = Quaternion(0.141855, 8.749822e-05, -0.0005213072, 0.98988736)
+bones/15/rotation = Quaternion(-0.6380741, -0.0010586272, 0.0016325851, 0.76997256)
+bones/17/rotation = Quaternion(-0.505711, 0.5744441, 0.5013427, -0.40364072)
+bones/18/rotation = Quaternion(0.14185722, -8.754064e-05, 0.0005213112, 0.98988706)
+bones/19/rotation = Quaternion(-0.63807505, 0.0010586684, -0.001632582, 0.7699717)
+bones/24/position = Vector3(6.291333e-08, 1.3425611, 0.49581626)
+
+[editable path="Dawg"]
