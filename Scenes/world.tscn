@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://b411em5bsjsgt"]
+
+[ext_resource type="PackedScene" uid="uid://dwm3x750j20bp" path="res://Scenes/human.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://85vdwekwsgfi" path="res://Scenes/static_nav_obstacle.tscn" id="1_go701"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a02cp"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_go701"]
+sky_material = SubResource("ProceduralSkyMaterial_a02cp")
+
+[sub_resource type="Environment" id="Environment_5a7ea"]
+background_mode = 2
+sky = SubResource("Sky_go701")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_a02cp"]
+vertices = PackedVector3Array(-13, 1, -6.75, -10.5, 1, -6.75, -10.5, 1, -8.75, -8.75, 1, -10.5, -6.75, 1, -10.5, -6.75, 1, -13, -10, 1, -9.75, -13, 1, -13, -4, 1, -10, 2, 1, -10.75, 3.25, 1, -11.5, -3.25, 1, -8.75, -3.25, 1, -7.25, 1.5, 1, -7.5, 1.5, 1, -9.75, 13, 1, -11.5, 13, 1, -13, -5.25, 1, -3.25, -7, 1, -3.25, -6.75, 1, -1, -5, 1, -1, -3.25, 1, 6.5, 3.5, 1, 6.75, 4, 1, 4.25, -3.25, 1, 0.75, -4, 1, -0.5, -3.75, 1, -4.25, 3.25, 1, -4.25, 2.25, 1, -4.75, -3.25, 1, -5.25, 5.25, 1, 3.5, 1.5, 1, -6, 6.75, 1, 3.5, 6.5, 1, -4.25, -8.75, 1, -1, -8.75, 1, -3.25, -10, 1, -4, -13, 1, 2.75, -10.5, 1, 0.75, -10, 1, -0.25, -10.5, 1, 2.75, 10.75, 1, 5.25, 10.75, 1, 7, 13, 1, 7, 10, 1, 4, 13, 1, -4.5, 9, 1, 3.5, -13, 1, 13, -10.5, 1, 13, 10.75, 1, 8.75, 9.75, 1, 10.25, 13, 1, 13, 8.75, 1, 10.75, 5.25, 1, 10.75, -3.25, 1, 13, 3.5, 1, 9, 4, 1, 10)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(2, 0, 6), PackedInt32Array(6, 0, 7), PackedInt32Array(3, 6, 5), PackedInt32Array(5, 6, 7), PackedInt32Array(4, 5, 8), PackedInt32Array(8, 5, 9), PackedInt32Array(9, 5, 10), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(15, 10, 16), PackedInt32Array(16, 10, 5), PackedInt32Array(14, 11, 9), PackedInt32Array(9, 11, 8), PackedInt32Array(20, 19, 17), PackedInt32Array(17, 19, 18), PackedInt32Array(22, 21, 23), PackedInt32Array(23, 21, 24), PackedInt32Array(20, 17, 25), PackedInt32Array(25, 17, 26), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 24), PackedInt32Array(24, 27, 23), PackedInt32Array(23, 27, 30), PackedInt32Array(26, 29, 25), PackedInt32Array(25, 29, 24), PackedInt32Array(13, 31, 12), PackedInt32Array(12, 31, 29), PackedInt32Array(32, 30, 33), PackedInt32Array(33, 30, 27), PackedInt32Array(29, 31, 28), PackedInt32Array(35, 18, 34), PackedInt32Array(34, 18, 19), PackedInt32Array(38, 37, 39), PackedInt32Array(39, 37, 36), PackedInt32Array(36, 37, 1), PackedInt32Array(1, 37, 0), PackedInt32Array(38, 40, 37), PackedInt32Array(34, 39, 35), PackedInt32Array(35, 39, 36), PackedInt32Array(43, 42, 41), PackedInt32Array(41, 44, 43), PackedInt32Array(43, 44, 45), PackedInt32Array(46, 32, 33), PackedInt32Array(46, 33, 44), PackedInt32Array(44, 33, 45), PackedInt32Array(48, 47, 40), PackedInt32Array(40, 47, 37), PackedInt32Array(49, 42, 43), PackedInt32Array(49, 43, 50), PackedInt32Array(50, 43, 51), PackedInt32Array(52, 51, 53), PackedInt32Array(53, 51, 54), PackedInt32Array(52, 50, 51), PackedInt32Array(55, 21, 22), PackedInt32Array(55, 56, 21), PackedInt32Array(21, 56, 54), PackedInt32Array(54, 56, 53)]
+agent_radius = 1.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yp4wr"]
+albedo_color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_go701"]
+data = PackedVector3Array(-15, -0.5, 15, -15, -0.5, -15, -15, 0.5, -15, 15, -0.5, -15, -15, -0.5, -15, -15, -0.5, 15, -15, 0.5, -15, -15, -0.5, -15, 15, -0.5, -15, -15, 0.5, -15, -15, 0.5, 15, -15, -0.5, 15, -15, -0.5, 15, -15, 0.5, 15, 15, 0.5, 15, 15, 0.5, 15, -15, 0.5, 15, -15, 0.5, -15, -15, -0.5, 15, 15, -0.5, 15, 15, -0.5, -15, 15, 0.5, 15, 15, -0.5, 15, -15, -0.5, 15, 15, -0.5, -15, 15, -0.5, 15, 15, 0.5, 15, 15, -0.5, -15, 15, 0.5, -15, -15, 0.5, -15, -15, 0.5, -15, 15, 0.5, -15, 15, 0.5, 15, 15, 0.5, 15, 15, 0.5, -15, 15, -0.5, -15)
+
+[node name="World" type="Node3D" unique_id=251047463]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=181221091]
+environment = SubResource("Environment_5a7ea")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1052442376]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=508825109]
+navigation_mesh = SubResource("NavigationMesh_a02cp")
+
+[node name="Ground" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1746915249]
+
+[node name="GroundCSG" type="CSGBox3D" parent="NavigationRegion3D/Ground" unique_id=1523893877]
+material_override = SubResource("StandardMaterial3D_yp4wr")
+size = Vector3(30, 1, 30)
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Ground" unique_id=1639939980]
+shape = SubResource("ConcavePolygonShape3D_go701")
+
+[node name="Box" parent="NavigationRegion3D" unique_id=632864689 instance=ExtResource("1_go701")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7, 2, 7)
+
+[node name="Box2" parent="NavigationRegion3D" unique_id=345832953 instance=ExtResource("1_go701")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7, 2, -7)
+
+[node name="Box3" parent="NavigationRegion3D" unique_id=917435741 instance=ExtResource("1_go701")]
+transform = Transform3D(9, 0, 0, 0, 3, 0, 0, 0, 3, 8, 2, -8)
+
+[node name="Box4" parent="NavigationRegion3D" unique_id=1733735661 instance=ExtResource("1_go701")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 12, -7, 2, 7)
+
+[node name="Human" parent="." unique_id=1742445246 instance=ExtResource("1_a02cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.5245697, 0)
+movement_speed = 4.0
+CurrentState = 0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1614889783]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 22, 0)

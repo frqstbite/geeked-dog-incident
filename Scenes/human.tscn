@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dwm3x750j20bp"]
+
+[ext_resource type="Script" uid="uid://frm4fidt7su6" path="res://Scripts/human_pathfinding.gd" id="1_byrx8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j03jf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_073c6"]
+albedo_color = Color(0, 0.59585917, 0.0650561, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_42mg8"]
+
+[node name="Human" type="CharacterBody3D" unique_id=1742445246]
+script = ExtResource("1_byrx8")
+movement_speed = null
+CurrentState = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=68771268]
+shape = SubResource("CapsuleShape3D_j03jf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1358526237]
+material_override = SubResource("StandardMaterial3D_073c6")
+mesh = SubResource("CapsuleMesh_42mg8")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1844796695]
+avoidance_enabled = true
+radius = 0.55
+debug_enabled = true
