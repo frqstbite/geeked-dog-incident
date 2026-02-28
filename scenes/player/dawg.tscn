@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bw17kijm22g0j"]
+
+[ext_resource type="PackedScene" uid="uid://dsnegvf4agyux" path="res://assets/player/Dawg.blend" id="1_fsnqd"]
+[ext_resource type="Material" uid="uid://dpqejqlhrqu74" path="res://materials/environment/dog.tres" id="2_hhq46"]
+
+[node name="Dawg" unique_id=589952143 instance=ExtResource("1_fsnqd")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(2114945922) index="0" unique_id=1676174059]
+bones/0/position = Vector3(1.3826241e-07, 0.96263206, -0.5974563)
+bones/1/rotation = Quaternion(-0.26956385, 8.917159e-07, 2.1162404e-07, 0.96298254)
+bones/2/rotation = Quaternion(-0.40417543, 9.834082e-08, 1.2575822e-07, 0.9146815)
+bones/3/rotation = Quaternion(0.5532198, -1.2923164e-05, -8.6468535e-06, 0.83303547)
+bones/5/rotation = Quaternion(0.082801506, -0.14397562, 0.47430852, 0.8645499)
+bones/6/rotation = Quaternion(-0.11853987, 0.00026397267, 0.001331975, 0.99294835)
+bones/7/rotation = Quaternion(-0.4481399, 0.003087318, -0.0034531914, 0.8939515)
+bones/9/rotation = Quaternion(0.082799435, 0.14397672, -0.4743082, 0.86455)
+bones/10/rotation = Quaternion(-0.11853582, -0.0002639211, -0.001331889, 0.9929489)
+bones/11/rotation = Quaternion(-0.44814166, -0.0030871576, 0.0034531038, 0.8939506)
+bones/13/rotation = Quaternion(0.5064238, 0.575332, 0.5003248, 0.40274447)
+bones/14/rotation = Quaternion(0.13691144, 8.707323e-05, -0.0005156276, 0.9905832)
+bones/15/rotation = Quaternion(-0.6355897, -0.0010616276, 0.0016255483, 0.77202463)
+bones/17/rotation = Quaternion(-0.50642353, 0.57533187, 0.50032514, -0.4027447)
+bones/18/rotation = Quaternion(0.1369129, -8.711751e-05, 0.000515642, 0.99058306)
+bones/19/rotation = Quaternion(-0.6355905, 0.0010616924, -0.0016255792, 0.772024)
+bones/24/position = Vector3(1.0311459e-07, 1.3442526, 0.49360386)
+
+[node name="back legs" parent="Armature/Skeleton3D" index="0" unique_id=619493932]
+surface_material_override/0 = ExtResource("2_hhq46")
+
+[node name="body" parent="Armature/Skeleton3D" index="1" unique_id=1450282831]
+surface_material_override/0 = ExtResource("2_hhq46")
+
+[node name="front legs" parent="Armature/Skeleton3D" index="2" unique_id=248487726]
+surface_material_override/0 = ExtResource("2_hhq46")
+
+[node name="Head" parent="Armature/Skeleton3D" index="3" unique_id=1676224940]
+surface_material_override/0 = ExtResource("2_hhq46")
+
+[node name="Tail" parent="Armature/Skeleton3D" index="4" unique_id=1029362284]
+surface_material_override/0 = ExtResource("2_hhq46")

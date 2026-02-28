@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bc5efg64uwy13" path="res://scenes/environment/buildings/long_1.tscn" id="7_worak"]
 [ext_resource type="PackedScene" uid="uid://d1ypfatjmnv3g" path="res://scenes/environment/buildings/long_2.tscn" id="8_aeo3b"]
 [ext_resource type="PackedScene" uid="uid://c4tqmh6a884hs" path="res://scenes/environment/props/tree.tscn" id="8_worak"]
+[ext_resource type="PackedScene" uid="uid://b2m1is0op2u0m" path="res://scenes/environment/car/2004_chevy_impala_2.tscn" id="9_6ly4w"]
+[ext_resource type="PackedScene" uid="uid://dsnegvf4agyux" path="res://assets/player/Dawg.blend" id="10_ar60c"]
 
 [node name="Node3D" type="Node3D" unique_id=1176179009]
 
@@ -34,3 +36,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9474087, 0, -0.06094861)
 
 [node name="L_Building" parent="." unique_id=983456006 instance=ExtResource("8_aeo3b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6763363, 0, -9.087956)
+
+[node name="2004 Chevy Impala2" parent="." unique_id=1554747365 instance=ExtResource("9_6ly4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.927498, 0, 9.116945)
+
+[node name="Dawg" parent="." unique_id=589952143 instance=ExtResource("10_ar60c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.551706, 0, 8.998027)
