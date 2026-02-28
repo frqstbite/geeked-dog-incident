@@ -19,6 +19,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_a02cp"]
+geometry_parsed_geometry_type = 1
 agent_radius = 1.5
 agent_max_climb = 1.0
 
@@ -63,7 +64,7 @@ transform = Transform3D(9, 0, 0, 0, 3, 0, 0, 0, 3, 8, 2, -8)
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 12, -9, 2, 7)
 
 [node name="Human" parent="." unique_id=1742445246 instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.5245697, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5245697, -18)
 CurrentState = 0
 
 [node name="TestPlayer" parent="." unique_id=1025771593 instance=ExtResource("3_5a7ea")]

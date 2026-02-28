@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dwm3x750j20bp"]
 
 [ext_resource type="Script" uid="uid://frm4fidt7su6" path="res://Scripts/human_pathfinding.gd" id="1_byrx8"]
-[ext_resource type="Texture2D" uid="uid://cxicu524r8i0r" path="res://icon.svg" id="2_j03jf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j03jf"]
 
@@ -15,6 +14,11 @@ albedo_color = Color(0.72868824, 0.5899588, 0.0173392, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42mg8"]
 albedo_color = Color(0.6451517, 0.043058224, 2.8878452e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byrx8"]
+albedo_color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_j03jf"]
 
 [node name="Human" type="CharacterBody3D" unique_id=1742445246]
 script = ExtResource("1_byrx8")
@@ -37,12 +41,11 @@ visible = false
 material_override = SubResource("StandardMaterial3D_42mg8")
 mesh = SubResource("CapsuleMesh_42mg8")
 
+[node name="DeadMesh" type="MeshInstance3D" parent="." unique_id=941349921]
+visible = false
+material_override = SubResource("StandardMaterial3D_byrx8")
+mesh = SubResource("CapsuleMesh_j03jf")
+
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1844796695]
 avoidance_enabled = true
 radius = 0.55
-debug_enabled = true
-
-[node name="Decal" type="Decal" parent="." unique_id=905345954]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024021566, 0.27022398, 0.5311794)
-size = Vector3(0.51812744, 0.6188965, 0.51379395)
-texture_albedo = ExtResource("2_j03jf")
