@@ -1,23 +1,34 @@
 extends Area3D
 
-var start_position
+var start_pos
 @export var travel_distance : float = 100.0
 @export var speed = 0.003 
-var end_position
-
-
-var t : float = 0.0
+var target_pos
+var duration = 2.0 # Total seconds to take
+var elapsed_time = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	start_position = position
-	end_position = start_position + (transform.basis.z * travel_distance)
-	
+	start_pos = position
+	target_pos = start_pos + (transform.basis.z * travel_distance)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(_delta: float) -> void:
-	t += 0.003
-	position = start_position.lerp(end_position, t)
+
+func _process(delta):
+	elapsed_time += delta
+	# Calculate normalized time (0 to 1)
+	var t = clamp(elapsed_time / duration, 0.0, 1.0)
 	
-	if(t > 1.0):
-		t = 0
+	# Linearly interpolate
+	position = lerp(start_pos, target_pos, t)
+	
+	if t == 1:
+		elapsed_time = 0
+		
+func _physics_process(delta: float) -> void:
+	var body_list = get_overlapping_bodies()
+	
+	if body_list.size() > 0:
+		for body in body_list:
+			if body is Human: 
+					if body.CurrentState != Human.ManagerStates.Dead:
+						body.CurrentState = Human.ManagerStates.Dead

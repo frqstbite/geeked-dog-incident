@@ -48,6 +48,8 @@ func _physics_process(delta: float) -> void:
 		panic_physics_process(delta)
 	elif CurrentState == ManagerStates.Concern:
 		concern_physics_process(delta)
+	elif CurrentState == ManagerStates.Dead:
+		death_physics_process(delta)
 		
 	choose_debug_mesh(CurrentState)
 
@@ -110,7 +112,10 @@ func panic_physics_process(delta):
 	# if we get close enough to the next path then just new path to avoid stopping
 	if position.distance_squared_to(target) < 3:
 		set_movement_target(position + (danger_position.direction_to(position) * randf_range(1, 3)))
-		
+
+func death_physics_process(_delta):
+	navigation_agent.set_velocity(Vector3.ZERO)
+
 func physics_movement(delta):
 	var next_path_position: Vector3 = navigation_agent.get_next_path_position()
 	var new_velocity: Vector3 = global_position.direction_to(next_path_position) * movement_speed
