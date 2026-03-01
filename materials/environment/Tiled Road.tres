@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://o2tt03r0xiwx"]
+
+[ext_resource type="Texture2D" uid="uid://cs57qtkgnqt2g" path="res://assets/textures/meshes/environment/single road.png" id="1_osx00"]
+
+[resource]
+albedo_texture = ExtResource("1_osx00")
+uv1_scale = Vector3(0.15, 0.15, 0.15)
+uv1_triplanar = true
+uv1_world_triplanar = true

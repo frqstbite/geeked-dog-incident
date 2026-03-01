@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b1cdkvs3tmfq7"]
 
-[ext_resource type="Texture2D" uid="uid://celsjy30q8vs1" path="res://assets/textures/meshes/environment/single grass.png" id="1_o5qli"]
+[ext_resource type="Material" uid="uid://bn2m7xcvtc6ia" path="res://materials/environment/Tiled Grass.tres" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cgt54fauo13va" path="res://scenes/debug/player.tscn" id="2_0wfyh"]
+[ext_resource type="Material" uid="uid://o2tt03r0xiwx" path="res://materials/environment/Tiled Road.tres" id="3_jyhfs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,11 +17,6 @@ sky = SubResource("Sky_sugp2")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wfyh"]
-albedo_texture = ExtResource("1_o5qli")
-uv1_triplanar = true
-uv1_world_triplanar = true
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_sugp2"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o5qli"]
@@ -34,9 +30,9 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1801877635]
 environment = SubResource("Environment_jyhfs")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=709180304]
+[node name="Grass Floor" type="MeshInstance3D" parent="." unique_id=709180304]
 transform = Transform3D(35.7, 0, 0, 0, 35.7, 0, 0, 0, 35.7, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_0wfyh")
+material_override = ExtResource("1_sugp2")
 mesh = SubResource("PlaneMesh_sugp2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=613525800]
@@ -52,3 +48,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2625302, 0)
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 16, 0)
 
 [node name="Objects" type="Node3D" parent="." unique_id=1229788221]
+
+[node name="Road" type="CSGBox3D" parent="." unique_id=1006182355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4547691, -0.070044994, 3.8223267)
+size = Vector3(8.251549, 0.3095703, 8.644653)
+material = ExtResource("3_jyhfs")
