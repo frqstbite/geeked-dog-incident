@@ -78,7 +78,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 16, 0)
 
 [node name="Car" parent="." unique_id=905283236 instance=ExtResource("4_bufah")]
-transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, -17, 1.5117345, -44)
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -17, 1.5117345, -44)
+freeze = true
 
 [node name="GeekBar" parent="." unique_id=516184198 instance=ExtResource("5_7t8gr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4)

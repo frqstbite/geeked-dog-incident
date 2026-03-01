@@ -9,7 +9,7 @@ size = Vector3(0.18397292, 0.7665069, 0.43961984)
 [node name="GeekBar" type="RigidBody3D" unique_id=516184198]
 collision_mask = 3
 contact_monitor = true
-max_contacts_reported = 3
+max_contacts_reported = 8
 script = ExtResource("1_xj51j")
 
 [node name="geekbar" parent="." unique_id=531684761 instance=ExtResource("2_vpkhu")]

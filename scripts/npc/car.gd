@@ -22,9 +22,8 @@ func _process(delta):
 	
 	if t == 1:
 		elapsed_time = 0
-		
 
-func _on_body_entered(body: Node) -> void:
+func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is Human: 
 		if body.CurrentState != Human.ManagerStates.Dead:
 			body.kill_human()

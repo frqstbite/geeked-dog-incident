@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxxymbu1nw2ge"]
 
 [ext_resource type="Script" uid="uid://bq8tts28ev7fw" path="res://scripts/npc/car.gd" id="1_wqo35"]
-[ext_resource type="PackedScene" uid="uid://86r1ghhhsygw" path="res://assets/meshes/npc/car/2004 Chevy Impala.glb" id="2_h6aq4"]
+[ext_resource type="PackedScene" uid="uid://86r1ghhhsygw" path="res://assets/meshes/npc/car.glb" id="2_h6aq4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h6aq4"]
 size = Vector3(1, 1, 2.453247)
@@ -9,13 +9,15 @@ size = Vector3(1, 1, 2.453247)
 [sub_resource type="BoxShape3D" id="BoxShape3D_61k84"]
 size = Vector3(1.116333, 0.5839844, 0.9764404)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ib5yt"]
+size = Vector3(1.3491211, 1.3911133, 3.607483)
+
 [node name="Car" type="RigidBody3D" unique_id=943026774]
 collision_priority = 4.0
 freeze_mode = 1
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_wqo35")
-travel_distance = null
 
 [node name="2004 Chevy Impala2" parent="." unique_id=1994843258 instance=ExtResource("2_h6aq4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -32,4 +34,11 @@ shape = SubResource("BoxShape3D_61k84")
 transform = Transform3D(1, 0, 0, 0, -0.42996, 0.9028483, 0, -0.9028483, -0.42996, 0.0010375977, -0.7465126, 1.6302465)
 shape = SubResource("BoxShape3D_61k84")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Area3D" type="Area3D" parent="." unique_id=1570724598]
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2141793608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03100586, -0.19555664, 0.083099365)
+shape = SubResource("BoxShape3D_ib5yt")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
