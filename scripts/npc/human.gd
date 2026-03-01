@@ -101,7 +101,7 @@ func wander_physics_process(delta):
 	
 	physics_movement(delta)
 	
-	if danger_position.distance_to(position) < 3:
+	if danger_position.distance_to(position) < 5:
 		set_movement_target(position)
 		CurrentState = ManagerStates.Concern 
 	

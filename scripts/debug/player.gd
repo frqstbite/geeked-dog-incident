@@ -119,4 +119,5 @@ func kill_player():
 	cam.reparent(get_parent())
 	playerModel.reparent(get_parent())
 	playerModel.ragdoll()
+	RoundManager.kill_player()
 	

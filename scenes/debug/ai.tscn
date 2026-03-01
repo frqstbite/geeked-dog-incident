@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cgt54fauo13va" path="res://scenes/debug/player.tscn" id="4_ad3ck"]
 [ext_resource type="PackedScene" uid="uid://cxxymbu1nw2ge" path="res://scenes/npc/car.tscn" id="4_bufah"]
 [ext_resource type="PackedScene" uid="uid://1y5rwjd1kuwq" path="res://scenes/collectible/geek_bar.tscn" id="5_7t8gr"]
+[ext_resource type="PackedScene" uid="uid://bygn82hlp186x" path="res://scenes/ui/hud_layer.tscn" id="5_l1bgr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a02cp"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -88,3 +89,5 @@ duration = 4.5
 
 [node name="GeekBar" parent="." unique_id=516184198 instance=ExtResource("5_7t8gr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4)
+
+[node name="HudLayer" parent="." unique_id=579735414 instance=ExtResource("5_l1bgr")]

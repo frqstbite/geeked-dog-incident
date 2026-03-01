@@ -27,4 +27,4 @@ func kill_player():
 	time_elapsed = 0
 	geek_value = original_geek_value
 	amount_refilled = 0
-	#get_tree().reload_current_scene.call_deferred()
+	get_tree().reload_current_scene.call_deferred()
