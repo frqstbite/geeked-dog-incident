@@ -7,9 +7,10 @@
 size = Vector3(1, 1, 2.453247)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_61k84"]
-size = Vector3(1.116333, 0.5839844, 0.578125)
+size = Vector3(1.116333, 0.5839844, 0.9764404)
 
 [node name="Car" type="RigidBody3D" unique_id=943026774]
+collision_priority = 4.0
 freeze_mode = 1
 contact_monitor = true
 max_contacts_reported = 4
@@ -28,7 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9122346, 0.4096684, 0, -0.4096684, 0.91223
 shape = SubResource("BoxShape3D_61k84")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1079108729]
-transform = Transform3D(1, 0, 0, 0, -0.17234196, 0.9850375, 0, -0.9850375, -0.17234196, 0.0010375977, -0.59765613, 1.4987106)
+transform = Transform3D(1, 0, 0, 0, -0.42996, 0.9028483, 0, -0.9028483, -0.42996, 0.0010375977, -0.7465126, 1.6302465)
 shape = SubResource("BoxShape3D_61k84")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

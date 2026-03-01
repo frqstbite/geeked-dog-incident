@@ -50,7 +50,7 @@ navigation_mesh = SubResource("NavigationMesh_a02cp")
 script = ExtResource("1_bufah")
 
 [node name="Ground" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1630337951]
-collision_priority = 3.0
+collision_priority = 4.0
 
 [node name="GroundCSG" type="CSGBox3D" parent="NavigationRegion3D/Ground" unique_id=1430617999]
 material_override = SubResource("StandardMaterial3D_yp4wr")
