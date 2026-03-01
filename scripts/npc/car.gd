@@ -1,4 +1,4 @@
-extends Area3D
+extends RigidBody3D
 
 var start_pos
 @export var travel_distance : float = 100.0
@@ -23,13 +23,11 @@ func _process(delta):
 	if t == 1:
 		elapsed_time = 0
 		
-func _physics_process(_delta: float) -> void:
-	var body_list = get_overlapping_bodies()
-	
-	if body_list.size() > 0:
-		for body in body_list:
-			if body is Human: 
-					if body.CurrentState != Human.ManagerStates.Dead:
-						body.kill_human()
-			elif body is Player:
-				RoundManager.kill_player()
+
+func _on_body_entered(body: Node) -> void:
+	if body is Human: 
+		if body.CurrentState != Human.ManagerStates.Dead:
+			body.kill_human()
+	elif body is Player:
+		body.kill_player()
+		#RoundManager.kill_player()
