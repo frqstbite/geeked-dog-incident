@@ -13,11 +13,12 @@ var target : Vector3
 var MAP_SIZE
 
 # State stuff (this could be split into a seperate state machine but i am lazy)
-enum ManagerStates {Wander, Concern, Panic, Dead}
+enum ManagerStates {Wander, Concern, Panic, Dead, Disabled}
 @export var CurrentState : ManagerStates = ManagerStates.Wander
 # Wander - Randomly Walk Around
 # Concern - Stop and look toward whatever chaos is going on, then after a while slowly walk away in the other direction.
 # Panic - Actively trying to run away from whatever is attacking
+# Disabled - Only stays idle. 
 
 # Wander stuff
 const MIN_WAIT_FRAMES = 100
@@ -30,6 +31,11 @@ var old_pos : Vector3
 
 @onready var ragdoll = get_node("human")
 
+var animation_tree : AnimationTree
+var move_value : float = 0
+var scared_value : float = 0
+var run_value : float = 0
+
 @export var mesh_debug = false
 
 func _ready() -> void:
@@ -40,6 +46,7 @@ func _ready() -> void:
 	player = get_parent().get_node("TestPlayer")
 	
 	MAP_SIZE = region.get_bounds().size
+	animation_tree = ragdoll.animation_tree
 	
 	
 func set_movement_target(movement_target: Vector3):
@@ -55,8 +62,15 @@ func _physics_process(delta: float) -> void:
 		concern_physics_process(delta)
 	elif CurrentState == ManagerStates.Dead:
 		death_physics_process(delta)
+	elif CurrentState == ManagerStates.Disabled:
+		disabled_physics_process(delta)
 		
 	choose_debug_mesh(CurrentState)
+	
+func disabled_physics_process(_delta):
+	animation_tree.set("parameters/ScaredBlend/blend_amount", 0)
+	animation_tree.set("parameters/RunBlend/blend_amount", 0)
+	animation_tree.set("parameters/MoveBlend/blend_amount", 0)
 
 func wander_physics_process(delta):
 	var danger_position : Vector3 = player.position
@@ -70,10 +84,24 @@ func wander_physics_process(delta):
 		WAIT_FRAMES = randi_range(MIN_WAIT_FRAMES, MAX_WAIT_FRAMES)
 		movement_speed = randf_range(2, 4)
 		return
+		
+	# reduce the other values
+	scared_value = move_toward(scared_value, 0, 0.05)
+	animation_tree.set("parameters/ScaredBlend/blend_amount", scared_value)
+	
+	run_value = move_toward(run_value, 0, 0.05)
+	animation_tree.set("parameters/RunBlend/blend_amount", run_value)
+		
+	if idle_frames > 10:
+		move_value = move_toward(move_value, 0, 0.05)
+		animation_tree.set("parameters/MoveBlend/blend_amount", move_value)
+	else:
+		move_value = move_toward(move_value, 1, 0.05)
+		animation_tree.set("parameters/MoveBlend/blend_amount", move_value)
 	
 	physics_movement(delta)
 	
-	if danger_position.distance_to(position) < 6:
+	if danger_position.distance_to(position) < 3:
 		set_movement_target(position)
 		CurrentState = ManagerStates.Concern 
 	
@@ -83,16 +111,19 @@ func concern_physics_process(delta):
 	
 	navigation_agent.set_velocity(Vector3.ZERO)
 	
-	# Rotate only if moving
+	# Rotate only if mov
 	if move_dir.length() > 0.001:
 		var target_rot = atan2(move_dir.x, move_dir.z)
 		rotation.y = lerp_angle(rotation.y, target_rot, delta * 8.0)
 		
-	if position.distance_to(danger_position) < 3:
+	if position.distance_to(danger_position) < 2:
 		CurrentState = ManagerStates.Panic
 		
 	if position.distance_to(danger_position) > 7:
 		CurrentState = ManagerStates.Wander
+		
+	scared_value = move_toward(scared_value, 1, 0.05)
+	animation_tree.set("parameters/ScaredBlend/blend_amount", scared_value)
 		
 func panic_physics_process(delta):
 	# try your best to run in the opposite direction from the danger, if you get far enough go back to wander.
@@ -100,6 +131,9 @@ func panic_physics_process(delta):
 	var danger_position : Vector3 = player.position
 	WAIT_FRAMES = 15
 	movement_speed = 4.0
+	
+	run_value = move_toward(run_value, 1, 0.05)
+	animation_tree.set("parameters/RunBlend/blend_amount", run_value)
 	
 	# check if navmesh is initialized
 	if NavigationServer3D.map_get_iteration_id(navigation_agent.get_navigation_map()) == 0:
@@ -175,9 +209,7 @@ func kill_human():
 	add_sibling(geek)
 	ragdoll.reparent(get_parent())
 	ragdoll.ragdoll()
-	
-	
-	
+
 func choose_debug_mesh(state):
 	if mesh_debug:
 		$human.visible = false
@@ -188,4 +220,3 @@ func choose_debug_mesh(state):
 	else:
 		pass
 		#$human.visible = true
-		

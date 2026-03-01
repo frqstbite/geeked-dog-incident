@@ -22,6 +22,8 @@ var last_direction = Vector3.FORWARD
 
 @onready var animation_tree : AnimationTree = playerModel.animation_tree
 
+@onready var smoke_particles = $Body/SmokeParticles
+
 var move_value : float = 0
 var attack_value : float = 0
 
@@ -105,7 +107,13 @@ func calculate_speed(delta):
 		speed_modifiers[i].duration -= delta
 		if speed_modifiers[i].duration <= 0:
 			speed_modifiers.remove_at(i)
-			
+
+func smoke():
+	$SmokeTimer.start()
+	smoke_particles.emitting = true
+	await $SmokeTimer.timeout
+	smoke_particles.emitting = false
+
 func kill_player():
 	alive = false
 	cam.reparent(get_parent())

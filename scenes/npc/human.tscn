@@ -56,5 +56,5 @@ mesh = SubResource("CapsuleMesh_j03jf")
 avoidance_enabled = true
 radius = 0.55
 
-[node name="human" parent="." unique_id=1938937339 instance=ExtResource("3_cy768")]
+[node name="human" parent="." unique_id=1218122690 instance=ExtResource("3_cy768")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.9973562, 0)

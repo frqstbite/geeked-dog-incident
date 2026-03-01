@@ -7,8 +7,8 @@
 size = Vector3(2.5969238, 2.9064941, 5.661133)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h6aq4"]
-radius = 1.5629883
-height = 9.0
+radius = 0.5151367
+height = 5.75
 
 [node name="Car" type="RigidBody3D" unique_id=943026774]
 collision_priority = 4.0
@@ -30,7 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010375977, 0.5621338, 1.10
 shape = SubResource("BoxShape3D_ib5yt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1013333733]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, -0.125)
 shape = SubResource("CapsuleShape3D_h6aq4")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

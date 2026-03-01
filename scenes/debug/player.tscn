@@ -8,10 +8,33 @@ radius = 0.34570313
 height = 1.6348267
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x7nyl"]
-size = Vector3(0.3, 0.3, 0.3)
+size = Vector3(0.649646, 0.3, 0.54648435)
+
+[sub_resource type="Curve" id="Curve_n2gxi"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.6619217, 0.5615835), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_c3urb"]
+curve = SubResource("Curve_n2gxi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fx3b0"]
+direction = Vector3(0, 1, 0)
+spread = 20.0
+initial_velocity_min = 0.099999994
+initial_velocity_max = 1.0
+gravity = Vector3(0, 1, 0)
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_c3urb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2gxi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_whxv7"]
+material = SubResource("StandardMaterial3D_n2gxi")
+size = Vector3(0.1, 0.1, 0.1)
 
 [node name="TestPlayer" type="CharacterBody3D" unique_id=1025771593]
 collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_khaq0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=556198816]
@@ -26,4 +49,16 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.9
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Body/AttackArea" unique_id=1830225526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010992436, 0, -0.12324214)
 shape = SubResource("BoxShape3D_x7nyl")
+
+[node name="SmokeParticles" type="GPUParticles3D" parent="Body" unique_id=373341150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2034968, 1.0198095)
+emitting = false
+amount = 32
+explosiveness = 0.2
+process_material = SubResource("ParticleProcessMaterial_fx3b0")
+draw_pass_1 = SubResource("BoxMesh_whxv7")
+
+[node name="SmokeTimer" type="Timer" parent="." unique_id=311735475]
+one_shot = true

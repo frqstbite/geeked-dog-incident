@@ -69,31 +69,35 @@ material_override = SubResource("StandardMaterial3D_a02cp")
 shape = SubResource("ConcavePolygonShape3D_go701")
 
 [node name="Human" parent="." unique_id=1742445246 instance=ExtResource("3_l1bgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.5245697, -17)
+
+[node name="Human3" parent="." unique_id=1369761725 instance=ExtResource("3_l1bgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1.5245697, -17)
+
+[node name="Human4" parent="." unique_id=654105958 instance=ExtResource("3_l1bgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.5245697, -17)
+
+[node name="Human5" parent="." unique_id=255392152 instance=ExtResource("3_l1bgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.5245697, -19)
+
+[node name="Human6" parent="." unique_id=553389931 instance=ExtResource("3_l1bgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1.5245697, -19)
+
+[node name="Human7" parent="." unique_id=1105966544 instance=ExtResource("3_l1bgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.5245697, -19)
+
+[node name="Human8" parent="." unique_id=929304814 instance=ExtResource("3_l1bgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.5245697, -21)
+
+[node name="Human9" parent="." unique_id=307633869 instance=ExtResource("3_l1bgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1.5245697, -21)
+
+[node name="Human10" parent="." unique_id=1817840542 instance=ExtResource("3_l1bgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.5245697, -21)
+
+[node name="Human2" parent="." unique_id=1533794533 instance=ExtResource("3_l1bgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5245697, -11)
-
-[node name="Human2" parent="." unique_id=893222307 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5245697, -11)
-
-[node name="Human3" parent="." unique_id=1573324544 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5245697, -11)
-
-[node name="Human4" parent="." unique_id=103529445 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5245697, -13)
-
-[node name="Human5" parent="." unique_id=411465461 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5245697, -13)
-
-[node name="Human6" parent="." unique_id=380477497 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5245697, -13)
-
-[node name="Human7" parent="." unique_id=889464901 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5245697, -15)
-
-[node name="Human8" parent="." unique_id=1159997290 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5245697, -15)
-
-[node name="Human9" parent="." unique_id=1089261821 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5245697, -15)
+CurrentState = 4
 
 [node name="TestPlayer" parent="." unique_id=1025771593 instance=ExtResource("4_ad3ck")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

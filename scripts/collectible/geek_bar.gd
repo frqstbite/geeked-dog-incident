@@ -19,5 +19,6 @@ func on_consume():
 func _on_body_entered(body: Node) -> void:
 	if body is Player:
 		player = body
+		player.smoke()
 		on_consume()
 		queue_free()
