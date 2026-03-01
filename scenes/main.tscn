@@ -3,6 +3,11 @@
 [ext_resource type="Material" uid="uid://bn2m7xcvtc6ia" path="res://materials/environment/Tiled Grass.tres" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cgt54fauo13va" path="res://scenes/debug/player.tscn" id="2_0wfyh"]
 [ext_resource type="Material" uid="uid://o2tt03r0xiwx" path="res://materials/environment/Tiled Road.tres" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bc5efg64uwy13" path="res://scenes/environment/buildings/long_1.tscn" id="3_tipki"]
+[ext_resource type="PackedScene" uid="uid://c4tqmh6a884hs" path="res://scenes/environment/props/tree.tscn" id="5_85g3d"]
+[ext_resource type="PackedScene" uid="uid://1rbluhys2n3m" path="res://scenes/environment/props/light.tscn" id="6_choun"]
+[ext_resource type="PackedScene" uid="uid://q85swiqrfyy" path="res://scenes/environment/props/trash.tscn" id="7_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://cp0haq47ma71t" path="res://scenes/environment/props/bench.tscn" id="8_eb6dy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -17,9 +22,11 @@ sky = SubResource("Sky_sugp2")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o5qli"]
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_sugp2"]
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o5qli"]
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_trceg"]
 
 [node name="Main" type="Node3D" unique_id=1469602935]
 
@@ -30,16 +37,19 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1801877635]
 environment = SubResource("Environment_jyhfs")
 
-[node name="Grass Floor" type="MeshInstance3D" parent="." unique_id=709180304]
-transform = Transform3D(35.7, 0, 0, 0, 35.7, 0, 0, 0, 35.7, 0, 0, 0)
-material_override = ExtResource("1_sugp2")
-mesh = SubResource("PlaneMesh_sugp2")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=613525800]
 transform = Transform3D(35.7, 0, 0, 0, 35.7, 0, 0, 0, 35.7, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=960646757]
 shape = SubResource("WorldBoundaryShape3D_o5qli")
+
+[node name="Grass Floor" type="MeshInstance3D" parent="StaticBody3D" unique_id=709180304]
+material_override = ExtResource("1_sugp2")
+mesh = SubResource("PlaneMesh_sugp2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1182662197]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.8166656, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_trceg")
 
 [node name="TestPlayer" parent="." unique_id=1025771593 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2625302, 0)
@@ -49,7 +59,31 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1
 
 [node name="Objects" type="Node3D" parent="." unique_id=1229788221]
 
+[node name="Long_Building_1" parent="Objects" unique_id=2111086352 instance=ExtResource("3_tipki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.686333, 0.009532073, 26.19433)
+
+[node name="Long_Building_2" parent="Objects" unique_id=1342927935 instance=ExtResource("3_tipki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.686333, 0.009532073, 18.581928)
+
+[node name="Long_Building_3" parent="Objects" unique_id=2140369243 instance=ExtResource("3_tipki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.686333, 0.009532073, 11.020506)
+
 [node name="Road" type="CSGBox3D" parent="." unique_id=1006182355]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4547691, -0.070044994, 3.8223267)
-size = Vector3(8.251549, 0.3095703, 8.644653)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4547691, -0.070044994, -1.0132904)
+size = Vector3(8.251549, 0.3095703, 74.25351)
 material = ExtResource("3_jyhfs")
+
+[node name="Prop_Tree" parent="." unique_id=131439570 instance=ExtResource("5_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.027814, 0.06883991, 22.405088)
+
+[node name="Prop_Tree2" parent="." unique_id=1775758069 instance=ExtResource("5_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.612992, 0.06883991, 14.951914)
+
+[node name="Prop_Light" parent="." unique_id=30113126 instance=ExtResource("6_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.713773, 0.09321183, 22.527803)
+
+[node name="Prop_Trash" parent="." unique_id=782225398 instance=ExtResource("7_ya4ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6429286, 0.056623697, 21.539997)
+
+[node name="Prop_Bench" parent="." unique_id=1859321305 instance=ExtResource("8_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.796015, 0.044681247, 18.94534)
