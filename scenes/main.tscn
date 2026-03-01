@@ -79,7 +79,7 @@ shape = SubResource("WorldBoundaryShape3D_eb6dy")
 transform = Transform3D(1.0000002, -6.662049e-11, 0, 2.6125235e-10, 1.0000002, 5.820766e-11, -2.3283064e-10, -1.1641532e-10, 1.0000002, -9.060175, 1.2399381, 10.551104)
 
 [node name="Camera3D" type="Camera3D" parent="TestPlayer" unique_id=976199575]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 16, 0)
+transform = Transform3D(0.99999946, -0.00042935577, 0.00061301305, -0.00046529775, 0.2848845, 0.95856154, -0.00058620516, -0.95856154, 0.2848842, 0.0156002045, 11.036764, 3.569847)
 
 [node name="Objects" type="Node3D" parent="." unique_id=1229788221]
 
