@@ -7,5 +7,5 @@ extends Node3D
 func ragdoll():
 	phys_bone_simulator.physical_bones_start_simulation()
 	smoke_particles.hide()
-	await get_tree().create_timer(8.0).timeout
+	await get_tree().create_timer(10.0).timeout
 	queue_free()

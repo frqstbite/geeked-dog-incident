@@ -21,6 +21,7 @@ func _physics_process(delta):
 	position = lerp(start_pos, target_pos, t)
 	
 	if t == 1:
+		await get_tree().create_timer(randf()).timeout
 		elapsed_time = 0
 
 func _on_area_3d_body_entered(body: Node3D) -> void:

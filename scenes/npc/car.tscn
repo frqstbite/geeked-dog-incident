@@ -12,6 +12,7 @@ height = 5.75
 
 [node name="Car" type="RigidBody3D" unique_id=943026774]
 collision_priority = 4.0
+freeze = true
 freeze_mode = 1
 continuous_cd = true
 contact_monitor = true
