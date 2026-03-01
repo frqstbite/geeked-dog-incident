@@ -1,4 +1,4 @@
-extends Node3D
+extends RigidBody3D
 class_name GeekBar
 
 var player : Player
@@ -9,6 +9,9 @@ var player : Player
 @export var modifier : bool = false
 @export var speed : float = 10.0
 @export var duration : float = 10.0 
+
+func _ready() -> void:
+	apply_impulse(Vector3(randf_range(0.1, 3), randf_range(0.1, 3), randf_range(0.1, 3)))
 
 func on_consume():
 	if player:

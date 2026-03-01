@@ -4,19 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://fa46fug6xx0l" path="res://assets/meshes/environment/props/geekbar.glb" id="2_vpkhu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vpkhu"]
-size = Vector3(0.18397292, 0.7665069, 0.43961984)
+size = Vector3(0.24179402, 0.9966568, 0.5721644)
 
 [node name="GeekBar" type="RigidBody3D" unique_id=516184198]
+collision_layer = 8
 collision_mask = 3
 contact_monitor = true
 max_contacts_reported = 8
 script = ExtResource("1_xj51j")
 
 [node name="geekbar" parent="." unique_id=531684761 instance=ExtResource("2_vpkhu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25521922, 0)
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, -0.25521922, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=760348753]
-transform = Transform3D(0.80837613, 0, 0, 0, 0.80837613, 0, 0, 0, 0.80837613, 0, 0.054653496, 0.016562488)
+transform = Transform3D(0.80837613, 0, 0, 0, 0.80837613, 0, 0, 0, 0.80837613, -0.0006303862, 0.14767733, 0.022047596)
 shape = SubResource("BoxShape3D_vpkhu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
