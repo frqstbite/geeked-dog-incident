@@ -28,6 +28,10 @@ var WAIT_FRAMES = MAX_WAIT_FRAMES
 var idle_frames : int = 0 
 var old_pos : Vector3
 
+@onready var ragdoll = get_node("human")
+
+@export var mesh_debug = false
+
 func _ready() -> void:
 	navigation_agent.velocity_computed.connect(Callable(_on_velocity_computed))
 	
@@ -165,14 +169,23 @@ func get_random_vector3_at_height(height, minimum, maximum):
 	
 func kill_human():
 	CurrentState = ManagerStates.Dead
+	$CollisionShape3D.disabled = true
 	var geek : RigidBody3D = geek_bar_scene.instantiate()
 	geek.position = position
 	add_sibling(geek)
-	queue_free()
+	ragdoll.reparent(get_parent())
+	ragdoll.ragdoll()
+	
 	
 	
 func choose_debug_mesh(state):
-	$WanderMesh.visible = state == ManagerStates.Wander
-	$ConcernMesh.visible = state == ManagerStates.Concern
-	$PanicMesh.visible = state == ManagerStates.Panic
-	$DeadMesh.visible = state == ManagerStates.Dead
+	if mesh_debug:
+		$human.visible = false
+		$WanderMesh.visible = state == ManagerStates.Wander
+		$ConcernMesh.visible = state == ManagerStates.Concern
+		$PanicMesh.visible = state == ManagerStates.Panic
+		$DeadMesh.visible = state == ManagerStates.Dead
+	else:
+		pass
+		#$human.visible = true
+		

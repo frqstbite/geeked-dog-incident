@@ -3,7 +3,7 @@ extends RigidBody3D
 var start_pos
 @export var travel_distance : float = 100.0
 var target_pos
-var duration = 5.0 # Total seconds to take
+@export var duration = 5.0 # Total seconds to take
 var elapsed_time = 0.0
 
 # Called when the node enters the scene tree for the first time.
@@ -12,7 +12,7 @@ func _ready() -> void:
 	target_pos = start_pos + (transform.basis.z * travel_distance)
 
 
-func _process(delta):
+func _physics_process(delta):
 	elapsed_time += delta
 	# Calculate normalized time (0 to 1)
 	var t = clamp(elapsed_time / duration, 0.0, 1.0)

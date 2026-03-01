@@ -3,42 +3,34 @@
 [ext_resource type="Script" uid="uid://bq8tts28ev7fw" path="res://scripts/npc/car.gd" id="1_wqo35"]
 [ext_resource type="PackedScene" uid="uid://86r1ghhhsygw" path="res://assets/meshes/npc/car.glb" id="2_h6aq4"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_h6aq4"]
-size = Vector3(1, 1, 2.453247)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_61k84"]
-size = Vector3(1.116333, 0.5839844, 0.9764404)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_ib5yt"]
-size = Vector3(1.3491211, 1.3911133, 3.607483)
+size = Vector3(2.5969238, 2.9064941, 5.661133)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h6aq4"]
+radius = 1.5629883
+height = 9.0
 
 [node name="Car" type="RigidBody3D" unique_id=943026774]
 collision_priority = 4.0
 freeze_mode = 1
+continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_wqo35")
 
 [node name="2004 Chevy Impala2" parent="." unique_id=1994843258 instance=ExtResource("2_h6aq4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-
-[node name="BaseCollision" type="CollisionShape3D" parent="." unique_id=344328155]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.27337646)
-shape = SubResource("BoxShape3D_h6aq4")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1464109689]
-transform = Transform3D(1, 0, 0, 0, 0.9122346, 0.4096684, 0, -0.4096684, 0.9122346, 0, -0.16044188, 0.7144395)
-shape = SubResource("BoxShape3D_61k84")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1079108729]
-transform = Transform3D(1, 0, 0, 0, -0.42996, 0.9028483, 0, -0.9028483, -0.42996, 0.0010375977, -0.7465126, 1.6302465)
-shape = SubResource("BoxShape3D_61k84")
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -1, 0)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1570724598]
-collision_mask = 7
+visible = false
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2141793608]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03100586, -0.19555664, 0.083099365)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010375977, 0.5621338, 1.1099243)
 shape = SubResource("BoxShape3D_ib5yt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1013333733]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_h6aq4")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -23,6 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="AttackArea" type="Area3D" parent="Body" unique_id=2057348381]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.9686765e-08, 1.329004, 0.95252347)
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Body/AttackArea" unique_id=1830225526]
 shape = SubResource("BoxShape3D_x7nyl")
