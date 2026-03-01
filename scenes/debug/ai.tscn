@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://b411em5bsjsgt"]
 
-[ext_resource type="Script" uid="uid://bmtgju1evgvpr" path="res://scripts/debug/autonav.gd" id="1_bufah"]
 [ext_resource type="PackedScene" uid="uid://dwm3x750j20bp" path="res://scenes/npc/human.tscn" id="3_l1bgr"]
 [ext_resource type="PackedScene" uid="uid://cgt54fauo13va" path="res://scenes/debug/player.tscn" id="4_ad3ck"]
 [ext_resource type="PackedScene" uid="uid://cxxymbu1nw2ge" path="res://scenes/npc/car.tscn" id="4_bufah"]
@@ -20,6 +19,8 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_a02cp"]
+vertices = PackedVector3Array(5.25, 1, 4, 7, 1, 4, 7, 1, -43.5, -43.5, 1, 7, 4, 1, 7, 4.25, 1, 4.75, -43.5, 1, -43.5, 10.25, 1, 5.25, 10.25, 1, 7, 43.5, 1, 7, 9.5, 1, 4.25, 43.5, 1, -43.5, 7, 1, 43.5, 7, 1, 10.25, 5.25, 1, 10.25, 4.25, 1, 9.5, -43.5, 1, 43.5, 10.25, 1, 8.75, 9.25, 1, 10, 43.5, 1, 43.5)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 5, 4), PackedInt32Array(0, 5, 2), PackedInt32Array(2, 5, 6), PackedInt32Array(6, 5, 3), PackedInt32Array(9, 8, 7), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 1, 9), PackedInt32Array(9, 1, 2), PackedInt32Array(9, 2, 11), PackedInt32Array(14, 13, 12), PackedInt32Array(15, 14, 12), PackedInt32Array(15, 12, 4), PackedInt32Array(4, 12, 3), PackedInt32Array(3, 12, 16), PackedInt32Array(17, 8, 9), PackedInt32Array(12, 13, 18), PackedInt32Array(17, 9, 18), PackedInt32Array(18, 9, 19), PackedInt32Array(18, 19, 12)]
 geometry_parsed_geometry_type = 1
 agent_radius = 1.5
 agent_max_climb = 1.0
@@ -47,7 +48,6 @@ shadow_enabled = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1174453549]
 navigation_mesh = SubResource("NavigationMesh_a02cp")
-script = ExtResource("1_bufah")
 
 [node name="Ground" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1630337951]
 collision_priority = 4.0
