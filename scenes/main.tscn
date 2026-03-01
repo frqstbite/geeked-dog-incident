@@ -3,6 +3,11 @@
 [ext_resource type="Material" uid="uid://bn2m7xcvtc6ia" path="res://materials/environment/Tiled Grass.tres" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cgt54fauo13va" path="res://scenes/debug/player.tscn" id="2_0wfyh"]
 [ext_resource type="Material" uid="uid://o2tt03r0xiwx" path="res://materials/environment/Tiled Road.tres" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bc5efg64uwy13" path="res://scenes/environment/buildings/long_1.tscn" id="3_tipki"]
+[ext_resource type="PackedScene" uid="uid://c4tqmh6a884hs" path="res://scenes/environment/props/tree.tscn" id="4_85g3d"]
+[ext_resource type="PackedScene" uid="uid://1rbluhys2n3m" path="res://scenes/environment/props/light.tscn" id="5_choun"]
+[ext_resource type="PackedScene" uid="uid://q85swiqrfyy" path="res://scenes/environment/props/trash.tscn" id="6_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://cp0haq47ma71t" path="res://scenes/environment/props/bench.tscn" id="7_eb6dy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,6 +27,7 @@ glow_enabled = true
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o5qli"]
 
 [node name="Main" type="Node3D" unique_id=1469602935]
+transform = Transform3D(0.9999966, 0.001782403, -0.0018925469, -0.0017812446, 0.9999982, 0.00061167404, 0.001893637, -0.00060829055, 0.99999803, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1863133789]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -49,7 +55,31 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1
 
 [node name="Objects" type="Node3D" parent="." unique_id=1229788221]
 
+[node name="Long_Building_1" parent="Objects" unique_id=2111086352 instance=ExtResource("3_tipki")]
+transform = Transform3D(0.99999684, -0.0017812488, 0.0018936342, 0.0017824001, 0.99999845, -0.0006083009, -0.0018925506, 0.00061166374, 0.9999982, -16.065357, 0.01850069, 21.148878)
+
+[node name="Long_Building_2" parent="Objects" unique_id=1387465423 instance=ExtResource("3_tipki")]
+transform = Transform3D(0.99999696, -0.0017812492, 0.0018936344, 0.0017824004, 0.99999857, -0.0006083009, -0.0018925508, 0.0006116638, 0.99999833, -16.081459, 0.023673078, 12.645885)
+
+[node name="Long_Building_3" parent="Objects" unique_id=668353488 instance=ExtResource("3_tipki")]
+transform = Transform3D(0.9999973, -0.0017812499, 0.0018936351, 0.0017824015, 0.9999989, -0.00060830096, -0.0018925518, 0.0006116639, 0.9999987, -16.097427, 0.02880209, 4.2142105)
+
+[node name="Prop_Tree" parent="Objects" unique_id=131439570 instance=ExtResource("4_85g3d")]
+transform = Transform3D(0.9999967, -0.0017812485, 0.001893634, 0.0017823997, 0.99999833, -0.0006083009, -0.0018925504, 0.00061166374, 0.9999981, -11.33631, 0.071307994, 16.83962)
+
+[node name="Prop_Tree2" parent="Objects" unique_id=454400354 instance=ExtResource("4_85g3d")]
+transform = Transform3D(0.9999967, -0.0017812485, 0.001893634, 0.0017823997, 0.99999833, -0.0006083009, -0.0018925504, 0.00061166374, 0.9999981, -11.848403, 0.07130714, 8.416342)
+
+[node name="Prop_Light" parent="Objects" unique_id=30113126 instance=ExtResource("5_choun")]
+transform = Transform3D(0.9999967, -0.0017812485, 0.001893634, 0.0017823997, 0.99999833, -0.0006083009, -0.0018925504, 0.00061166374, 0.9999981, -6.42874, 0.09407821, 16.96065)
+
+[node name="Prop_Trash" parent="Objects" unique_id=782225398 instance=ExtResource("6_ya4ey")]
+transform = Transform3D(0.99999684, -0.0017812488, 0.0018936342, 0.0017824001, 0.99999845, -0.0006083009, -0.0018925506, 0.00061166374, 0.9999982, -8.582773, 0.054005537, 16.173552)
+
+[node name="Prop_Bench" parent="Objects" unique_id=1859321305 instance=ExtResource("7_eb6dy")]
+transform = Transform3D(0.9999967, -0.0017812485, 0.001893634, 0.0017823997, 0.99999833, -0.0006083009, -0.0018925504, 0.00061166374, 0.9999981, -8.565084, 0.04630981, 14.012022)
+
 [node name="Road" type="CSGBox3D" parent="." unique_id=1006182355]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4547691, -0.070044994, 3.8223267)
-size = Vector3(8.251549, 0.3095703, 8.644653)
+transform = Transform3D(1.0000035, -4.3867203e-09, -5.7043508e-09, 3.4020786e-09, 1.0000079, 4.656613e-10, -2.4447218e-09, -2.0954758e-09, 1.000002, -3.4547722, -0.07004504, -0.8366346)
+size = Vector3(8.251549, 0.3095703, 74.17503)
 material = ExtResource("3_jyhfs")
