@@ -38,3 +38,16 @@ offset_bottom = 191.0
 grow_horizontal = 0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_1fmk2")
+
+[node name="TimeElapsed" type="Label" parent="Hud" unique_id=1862022907]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -131.0
+offset_top = 121.0
+offset_right = -91.0
+offset_bottom = 144.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "0:00"
