@@ -9,7 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://d1ypfatjmnv3g" path="res://scenes/environment/buildings/long_2.tscn" id="8_aeo3b"]
 [ext_resource type="PackedScene" uid="uid://c4tqmh6a884hs" path="res://scenes/environment/props/tree.tscn" id="8_worak"]
 [ext_resource type="PackedScene" uid="uid://b2m1is0op2u0m" path="res://scenes/environment/car/2004_chevy_impala_2.tscn" id="9_6ly4w"]
-[ext_resource type="PackedScene" uid="uid://bw17kijm22g0j" path="res://scenes/player/dawg.tscn" id="10_ar60c"]
+[ext_resource type="PackedScene" uid="uid://bw17kijm22g0j" path="res://scenes/player.tscn" id="10_ar60c"]
+[ext_resource type="PackedScene" uid="uid://l6hf04k0x2bd" path="res://scenes/environment/props/geekbar.tscn" id="11_ohfh0"]
 
 [node name="Node3D" type="Node3D" unique_id=1176179009]
 
@@ -40,26 +41,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6763363, 0, -9.087956)
 [node name="2004 Chevy Impala2" parent="." unique_id=1554747365 instance=ExtResource("9_6ly4w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.969234, 0, 9.116945)
 
-[node name="Dawg" parent="." unique_id=589952143 instance=ExtResource("10_ar60c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.58765, 0, 8.647633)
+[node name="Player" parent="." unique_id=589952143 instance=ExtResource("10_ar60c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.336766, 0.5017392, 7.091797)
 
-[node name="Skeleton3D" parent="Dawg/Armature" parent_id_path=PackedInt32Array(589952143, 2114945922) index="0" unique_id=1676174059]
-bones/0/position = Vector3(9.9622625e-08, 0.96203446, -0.5974563)
-bones/1/rotation = Quaternion(-0.26924223, 8.917865e-07, 2.1132615e-07, 0.9630725)
-bones/2/rotation = Quaternion(-0.40126202, 9.87404e-08, 1.2544474e-07, 0.91596335)
-bones/3/rotation = Quaternion(0.55050576, -1.2951219e-05, -8.604766e-06, 0.8348315)
-bones/5/rotation = Quaternion(0.08628865, -0.14206174, 0.4748522, 0.86422694)
-bones/6/rotation = Quaternion(-0.12602694, 0.00026425597, 0.0014061346, 0.9920258)
-bones/7/rotation = Quaternion(-0.44505787, 0.0031175406, -0.0034749743, 0.89548975)
-bones/9/rotation = Quaternion(0.08628756, 0.14206232, -0.47485214, 0.864227)
-bones/10/rotation = Quaternion(-0.12602496, -0.00026420827, -0.0014060871, 0.99202603)
-bones/11/rotation = Quaternion(-0.44505876, -0.0031174398, 0.0034749606, 0.8954893)
-bones/13/rotation = Quaternion(0.50571144, 0.5744445, 0.5013422, 0.40364048)
-bones/14/rotation = Quaternion(0.141855, 8.749822e-05, -0.0005213072, 0.98988736)
-bones/15/rotation = Quaternion(-0.6380741, -0.0010586272, 0.0016325851, 0.76997256)
-bones/17/rotation = Quaternion(-0.505711, 0.5744441, 0.5013427, -0.40364072)
-bones/18/rotation = Quaternion(0.14185722, -8.754064e-05, 0.0005213112, 0.98988706)
-bones/19/rotation = Quaternion(-0.63807505, 0.0010586684, -0.001632582, 0.7699717)
-bones/24/position = Vector3(6.291333e-08, 1.3425611, 0.49581626)
+[node name="Skeleton3D" parent="Player/Armature" parent_id_path=PackedInt32Array(589952143, 1733884491) index="0" unique_id=1582842650]
+bones/0/position = Vector3(-0.0045284983, 0.75956076, -0.32430348)
+bones/0/rotation = Quaternion(0.7746215, -8.8799504e-07, -7.694581e-07, 0.6324251)
+bones/1/rotation = Quaternion(-0.21835297, 8.9933013e-07, 1.4490566e-07, 0.9758699)
+bones/2/rotation = Quaternion(-0.17334096, 0.019085387, -0.008508101, 0.9846402)
+bones/3/rotation = Quaternion(0.4444352, -0.0073439833, 0.01629246, 0.8956327)
+bones/5/rotation = Quaternion(0.23569639, -0.049390197, 0.49814674, 0.8329812)
+bones/6/rotation = Quaternion(-0.6862569, 0.0017262148, 0.025776237, 0.7269004)
+bones/7/rotation = Quaternion(-0.06962883, 0.011751616, -0.0470778, 0.9963922)
+bones/9/rotation = Quaternion(0.28462523, 0.03231338, -0.48999283, 0.8233174)
+bones/10/rotation = Quaternion(-0.7281615, 0.0005491341, 0.008876571, 0.685348)
+bones/11/rotation = Quaternion(-0.05765102, 0.0066944277, -0.03737876, 0.99761444)
+bones/13/rotation = Quaternion(0.5583906, 0.64402026, 0.40974456, 0.32488054)
+bones/14/rotation = Quaternion(0.324983, 0.0002820166, -0.001708402, 0.9457183)
+bones/15/rotation = Quaternion(-0.8476165, -0.0025934074, 0.0047991644, 0.53058136)
+bones/17/rotation = Quaternion(-0.5614334, 0.64134073, 0.41133702, -0.32291877)
+bones/18/rotation = Quaternion(0.32509708, 6.586983e-05, -0.0003987409, 0.9456806)
+bones/19/rotation = Quaternion(-0.8476696, -0.00060530833, 0.0011200731, 0.53052294)
+bones/20/position = Vector3(0.15695563, 0.113831766, 0.70057327)
+bones/20/rotation = Quaternion(0.89188856, 0.012630494, -0.019778445, 0.4516461)
+bones/22/position = Vector3(-0.20236, 0.14161184, 0.67976147)
+bones/22/rotation = Quaternion(0.8933792, 0.02531122, -0.012751896, 0.4484089)
+bones/24/position = Vector3(-0.00076770526, 0.9925081, 0.93375725)
+bones/24/rotation = Quaternion(0.814842, 0.006252545, 0.0064555635, 0.5796136)
 
-[editable path="Dawg"]
+[node name="geekbar" parent="." unique_id=2092676837 instance=ExtResource("11_ohfh0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.139889, 0, 8.182738)
+
+[editable path="Player"]
