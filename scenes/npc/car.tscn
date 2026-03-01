@@ -1,23 +1,35 @@
 [gd_scene format=3 uid="uid://cxxymbu1nw2ge"]
 
 [ext_resource type="Script" uid="uid://bq8tts28ev7fw" path="res://scripts/npc/car.gd" id="1_wqo35"]
+[ext_resource type="PackedScene" uid="uid://86r1ghhhsygw" path="res://assets/meshes/npc/car/2004 Chevy Impala.glb" id="2_h6aq4"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_foosu"]
-albedo_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-07, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_h6aq4"]
+size = Vector3(1, 1, 2.453247)
 
-[sub_resource type="BoxMesh" id="BoxMesh_foosu"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_61k84"]
+size = Vector3(1.116333, 0.5839844, 0.9764404)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_foosu"]
-size = Vector3(1.3017578, 1, 2.1010742)
-
-[node name="Car" type="Area3D" unique_id=905283236]
+[node name="Car" type="RigidBody3D" unique_id=943026774]
+collision_priority = 4.0
+freeze_mode = 1
+contact_monitor = true
+max_contacts_reported = 4
 script = ExtResource("1_wqo35")
+travel_distance = null
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=759458737]
-transform = Transform3D(1.3061737, 0, 0, 0, 1, 0, 0, 0, 2.1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_foosu")
-mesh = SubResource("BoxMesh_foosu")
+[node name="2004 Chevy Impala2" parent="." unique_id=1994843258 instance=ExtResource("2_h6aq4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1670835102]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0014648438, 0, 0.0031738281)
-shape = SubResource("BoxShape3D_foosu")
+[node name="BaseCollision" type="CollisionShape3D" parent="." unique_id=344328155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.27337646)
+shape = SubResource("BoxShape3D_h6aq4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1464109689]
+transform = Transform3D(1, 0, 0, 0, 0.9122346, 0.4096684, 0, -0.4096684, 0.9122346, 0, -0.16044188, 0.7144395)
+shape = SubResource("BoxShape3D_61k84")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1079108729]
+transform = Transform3D(1, 0, 0, 0, -0.42996, 0.9028483, 0, -0.9028483, -0.42996, 0.0010375977, -0.7465126, 1.6302465)
+shape = SubResource("BoxShape3D_61k84")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

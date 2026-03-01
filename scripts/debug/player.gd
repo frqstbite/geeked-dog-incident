@@ -10,6 +10,8 @@ var speed_modifiers : Array[SpeedModifier] = []
 @onready var attack_area : Area3D = $Body/AttackArea
 var attack_debounce = 0
 
+var alive = true
+
 # rotation
 @export var rotation_speed = 2
 var last_direction = Vector3.FORWARD
@@ -42,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, speed)
 		
 	if direction:
-		playerModel.rotation.y = lerp_angle(playerModel.rotation.y, atan2(-velocity.x, -velocity.z), 12.0 * delta)
+		playerModel.rotation.y = lerp_angle(playerModel.rotation.y, atan2(velocity.x, velocity.z), 12.0 * delta)
 	
 	move_and_slide()
 	
@@ -81,3 +83,9 @@ func calculate_speed(delta):
 		speed_modifiers[i].duration -= delta
 		if speed_modifiers[i].duration <= 0:
 			speed_modifiers.remove_at(i)
+			
+func kill_player():
+	cam.reparent(get_parent())
+	playerModel.reparent(get_parent())
+	playerModel.ragdoll()
+	
