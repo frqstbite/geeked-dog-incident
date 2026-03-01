@@ -71,31 +71,7 @@ shape = SubResource("ConcavePolygonShape3D_go701")
 [node name="Human" parent="." unique_id=1742445246 instance=ExtResource("3_l1bgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.5245697, -17)
 
-[node name="Human3" parent="." unique_id=1369761725 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1.5245697, -17)
-
-[node name="Human4" parent="." unique_id=654105958 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.5245697, -17)
-
-[node name="Human5" parent="." unique_id=255392152 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.5245697, -19)
-
-[node name="Human6" parent="." unique_id=553389931 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1.5245697, -19)
-
-[node name="Human7" parent="." unique_id=1105966544 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.5245697, -19)
-
-[node name="Human8" parent="." unique_id=929304814 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.5245697, -21)
-
-[node name="Human9" parent="." unique_id=307633869 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1.5245697, -21)
-
-[node name="Human10" parent="." unique_id=1817840542 instance=ExtResource("3_l1bgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.5245697, -21)
-
-[node name="Human2" parent="." unique_id=1533794533 instance=ExtResource("3_l1bgr")]
+[node name="Owner" parent="." unique_id=1533794533 instance=ExtResource("3_l1bgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5245697, -11)
 CurrentState = 4
 
