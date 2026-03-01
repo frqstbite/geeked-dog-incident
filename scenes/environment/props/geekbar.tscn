@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://l6hf04k0x2bd"]
+
+[ext_resource type="PackedScene" uid="uid://fa46fug6xx0l" path="res://assets/meshes/environment/props/geekbar.glb" id="1_as3vg"]
+[ext_resource type="Material" uid="uid://byvjposq5u00e" path="res://materials/environment/props.tres" id="2_plsba"]
+
+[node name="geekbar" unique_id=2092676837 instance=ExtResource("1_as3vg")]
+
+[node name="geek bar" parent="." index="0" unique_id=334563882]
+surface_material_override/0 = ExtResource("2_plsba")
