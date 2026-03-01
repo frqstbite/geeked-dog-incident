@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NavmeshStuff"
-run/main_scene="uid://chtvsib73o0oc"
+run/main_scene="uid://cpxd48if3ka3h"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
