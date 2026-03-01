@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://b1cdkvs3tmfq7"]
+
+[ext_resource type="Texture2D" uid="uid://celsjy30q8vs1" path="res://assets/textures/meshes/environment/single grass.png" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://cgt54fauo13va" path="res://scenes/debug/player.tscn" id="2_0wfyh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_sugp2"]
+sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
+
+[sub_resource type="Environment" id="Environment_jyhfs"]
+background_mode = 2
+sky = SubResource("Sky_sugp2")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wfyh"]
+albedo_texture = ExtResource("1_o5qli")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sugp2"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_o5qli"]
+
+[node name="Main" type="Node3D" unique_id=1469602935]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1863133789]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1801877635]
+environment = SubResource("Environment_jyhfs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=709180304]
+transform = Transform3D(35.7, 0, 0, 0, 35.7, 0, 0, 0, 35.7, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_0wfyh")
+mesh = SubResource("PlaneMesh_sugp2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=613525800]
+transform = Transform3D(35.7, 0, 0, 0, 35.7, 0, 0, 0, 35.7, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=960646757]
+shape = SubResource("WorldBoundaryShape3D_o5qli")
+
+[node name="TestPlayer" parent="." unique_id=1025771593 instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2625302, 0)
+
+[node name="Camera3D" type="Camera3D" parent="TestPlayer" unique_id=976199575]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 16, 0)
+
+[node name="Objects" type="Node3D" parent="." unique_id=1229788221]

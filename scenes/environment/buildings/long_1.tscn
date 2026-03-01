@@ -12,10 +12,11 @@ size = Vector3(7.8183594, 6.463623, 5.9882813)
 
 [node name="Long_Building_1" unique_id=2111086352 instance=ExtResource("1_x420p")]
 
-[node name="3x5 grass" parent="." index="0" unique_id=739119206]
+[node name="3x5 grass" parent="." index="0" unique_id=994298137]
+visible = false
 surface_material_override/0 = ExtResource("2_ud1a1")
 
-[node name="building short 1" parent="." index="1" unique_id=1871211013]
+[node name="building short 1" parent="." index="1" unique_id=1956895177]
 surface_material_override/0 = SubResource("StandardMaterial3D_0jcxj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1633781708]

@@ -9,10 +9,11 @@ size = Vector3(0.85375977, 1.097229, 0.8076172)
 
 [node name="Prop_Trash" unique_id=782225398 instance=ExtResource("1_c0iod")]
 
-[node name="grass" parent="." index="0" unique_id=697706804]
+[node name="grass" parent="." index="0" unique_id=311297766]
+visible = false
 surface_material_override/0 = ExtResource("2_t7o6f")
 
-[node name="trash can" parent="." index="1" unique_id=117911188]
+[node name="trash can" parent="." index="1" unique_id=611480954]
 surface_material_override/0 = ExtResource("3_11hhb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=5896729]

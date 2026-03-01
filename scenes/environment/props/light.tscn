@@ -9,10 +9,11 @@ size = Vector3(0.296875, 3.7566223, 0.34960938)
 
 [node name="Prop_Light" unique_id=30113126 instance=ExtResource("1_6rwpx")]
 
-[node name="grass" parent="." index="0" unique_id=316676720]
+[node name="grass" parent="." index="0" unique_id=1662994529]
+visible = false
 surface_material_override/0 = ExtResource("2_7y4id")
 
-[node name="light" parent="." index="1" unique_id=1954503596]
+[node name="light" parent="." index="1" unique_id=1771242831]
 surface_material_override/0 = ExtResource("3_exoku")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=166316273]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hgmeofmdcsh8" path="res://scripts/debug/player.gd" id="1_khaq0"]
 [ext_resource type="PackedScene" uid="uid://bw17kijm22g0j" path="res://scenes/player.tscn" id="2_n2gxi"]
+[ext_resource type="PackedScene" uid="uid://d21jmis1uetxj" path="res://scenes/npc/hud.tscn" id="3_c3urb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_khaq0"]
 radius = 0.96728516
@@ -25,3 +26,8 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Body/AttackArea" unique_id=1830225526]
 shape = SubResource("BoxShape3D_x7nyl")
+
+[node name="Hud" parent="." unique_id=1224174830 instance=ExtResource("3_c3urb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022574544, 0, 1.3624682)
+
+[editable path="Hud"]
