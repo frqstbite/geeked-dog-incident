@@ -1,7 +1,9 @@
 extends CharacterBody3D
+class_name Human
 
 @export var movement_speed: float = 4.0
 @onready var navigation_agent: NavigationAgent3D = get_node("NavigationAgent3D")
+@export var geek_bar_scene : PackedScene
 
 var region : NavigationRegion3D
 var player 
@@ -47,6 +49,8 @@ func _physics_process(delta: float) -> void:
 		panic_physics_process(delta)
 	elif CurrentState == ManagerStates.Concern:
 		concern_physics_process(delta)
+	elif CurrentState == ManagerStates.Dead:
+		death_physics_process(delta)
 		
 	choose_debug_mesh(CurrentState)
 
@@ -91,6 +95,7 @@ func panic_physics_process(delta):
 	# for now it is going to be in a straight line
 	var danger_position : Vector3 = player.position
 	WAIT_FRAMES = 15
+	movement_speed = 4.0
 	
 	# check if navmesh is initialized
 	if NavigationServer3D.map_get_iteration_id(navigation_agent.get_navigation_map()) == 0:
@@ -108,7 +113,10 @@ func panic_physics_process(delta):
 	# if we get close enough to the next path then just new path to avoid stopping
 	if position.distance_squared_to(target) < 3:
 		set_movement_target(position + (danger_position.direction_to(position) * randf_range(1, 3)))
-		
+
+func death_physics_process(_delta):
+	navigation_agent.set_velocity(Vector3.ZERO)
+
 func physics_movement(delta):
 	var next_path_position: Vector3 = navigation_agent.get_next_path_position()
 	var new_velocity: Vector3 = global_position.direction_to(next_path_position) * movement_speed
@@ -154,6 +162,14 @@ func is_point_on_navmesh(point : Vector3) -> bool:
 
 func get_random_vector3_at_height(height, minimum, maximum):
 	return Vector3(randf_range(minimum, maximum), height, randf_range(minimum, maximum))
+	
+func kill_human():
+	CurrentState = ManagerStates.Dead
+	var geek : RigidBody3D = geek_bar_scene.instantiate()
+	geek.position = position
+	add_sibling(geek)
+	queue_free()
+	
 	
 func choose_debug_mesh(state):
 	$WanderMesh.visible = state == ManagerStates.Wander

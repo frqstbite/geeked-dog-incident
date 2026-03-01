@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b2m1is0op2u0m"]
+
+[ext_resource type="PackedScene" uid="uid://86r1ghhhsygw" path="res://assets/meshes/npc/car/2004 Chevy Impala.glb" id="1_8jk0u"]
+[ext_resource type="Material" uid="uid://o7lo0jixt6xv" path="res://materials/npc/car.tres" id="2_q0fhl"]
+
+[node name="2004 Chevy Impala2" unique_id=1554747365 instance=ExtResource("1_8jk0u")]
+
+[node name="2004 Chevy Impala" parent="." index="0" unique_id=1522343112]
+surface_material_override/0 = ExtResource("2_q0fhl")
+
+[node name="Wheels" parent="." index="1" unique_id=2058507970]
+surface_material_override/0 = ExtResource("2_q0fhl")
