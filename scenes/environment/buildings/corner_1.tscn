@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d1ypfatjmnv3g"]
+[gd_scene format=3 uid="uid://cgpjdnr41rlr5"]
 
 [ext_resource type="PackedScene" uid="uid://bl8hljc00jgvl" path="res://assets/meshes/environment/buildings/long_2.glb" id="1_mq11o"]
 [ext_resource type="Material" uid="uid://bm1bsu1t1igfr" path="res://materials/environment/floor.tres" id="2_yi10g"]
