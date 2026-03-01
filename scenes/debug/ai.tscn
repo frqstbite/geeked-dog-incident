@@ -50,6 +50,7 @@ navigation_mesh = SubResource("NavigationMesh_a02cp")
 script = ExtResource("1_bufah")
 
 [node name="Ground" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1630337951]
+collision_priority = 4.0
 
 [node name="GroundCSG" type="CSGBox3D" parent="NavigationRegion3D/Ground" unique_id=1430617999]
 material_override = SubResource("StandardMaterial3D_yp4wr")
@@ -77,7 +78,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 16, 0)
 
 [node name="Car" parent="." unique_id=905283236 instance=ExtResource("4_bufah")]
-transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, -17, 1, -44)
+transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, -17, 1.5117345, -44)
 
 [node name="GeekBar" parent="." unique_id=516184198 instance=ExtResource("5_7t8gr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4)

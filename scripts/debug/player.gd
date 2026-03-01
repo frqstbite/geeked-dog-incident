@@ -85,6 +85,6 @@ func calculate_speed(delta):
 			speed_modifiers.remove_at(i)
 			
 func kill_player():
-	cam.reparent($Body)
+	cam.reparent(get_parent())
 	$Body.ragdoll()
 	
