@@ -86,5 +86,6 @@ func calculate_speed(delta):
 			
 func kill_player():
 	cam.reparent(get_parent())
-	$Body.ragdoll()
+	playerModel.reparent(get_parent())
+	playerModel.ragdoll()
 	
