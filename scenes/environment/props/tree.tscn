@@ -9,10 +9,11 @@ size = Vector3(1, 4.4172363, 1)
 
 [node name="Prop_Tree" unique_id=131439570 instance=ExtResource("1_n0lu0")]
 
-[node name="grass" parent="." index="0" unique_id=1988884759]
+[node name="grass" parent="." index="0" unique_id=2099927047]
+visible = false
 surface_material_override/0 = ExtResource("2_v68v6")
 
-[node name="tree" parent="." index="1" unique_id=1110284214]
+[node name="tree" parent="." index="1" unique_id=358520407]
 surface_material_override/0 = ExtResource("3_20xce")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=474433686]

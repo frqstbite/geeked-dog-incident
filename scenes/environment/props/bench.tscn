@@ -9,10 +9,11 @@ size = Vector3(0.90808105, 2.0535889, 2.5389404)
 
 [node name="Prop_Bench" unique_id=1859321305 instance=ExtResource("1_1msl4")]
 
-[node name="3x2 grass" parent="." index="0" unique_id=9256466]
+[node name="3x2 grass" parent="." index="0" unique_id=1792747081]
+visible = false
 surface_material_override/0 = ExtResource("2_2n2g0")
 
-[node name="bench" parent="." index="1" unique_id=894004709]
+[node name="bench" parent="." index="1" unique_id=1651174847]
 surface_material_override/0 = ExtResource("3_syorj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1808182422]

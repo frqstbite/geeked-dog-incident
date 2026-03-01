@@ -9,10 +9,11 @@ size = Vector3(1.6992188, 1.3197632, 1.6386719)
 
 [node name="Prop_Shrub" unique_id=254670634 instance=ExtResource("1_k5uiv")]
 
-[node name="grass" parent="." index="0" unique_id=1823478431]
+[node name="grass" parent="." index="0" unique_id=1484754595]
+visible = false
 surface_material_override/0 = ExtResource("2_v2vxk")
 
-[node name="shrub" parent="." index="1" unique_id=82454468]
+[node name="shrub" parent="." index="1" unique_id=2092738646]
 transform = Transform3D(0.9999924, 0.0033219585, -0.0020637666, -0.003318207, 0.99999285, 0.0018172027, 0.0020697922, -0.0018103363, 0.9999962, 0, 0, 0)
 surface_material_override/0 = ExtResource("3_j6wfw")
 

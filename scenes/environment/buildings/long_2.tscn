@@ -15,10 +15,11 @@ size = Vector3(2.1572418, 9.651794, 5.631714)
 
 [node name="L_Building" unique_id=207823336 instance=ExtResource("1_mq11o")]
 
-[node name="5x6 grass" parent="." index="0" unique_id=549177204]
+[node name="5x6 grass" parent="." index="0" unique_id=1737802496]
+visible = false
 surface_material_override/0 = ExtResource("2_yi10g")
 
-[node name="building L" parent="." index="1" unique_id=1769609276]
+[node name="building L" parent="." index="1" unique_id=164915887]
 surface_material_override/0 = SubResource("StandardMaterial3D_0shmg")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1919769648]
