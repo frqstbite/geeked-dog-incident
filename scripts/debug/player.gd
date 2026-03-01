@@ -80,8 +80,6 @@ func _physics_process(delta: float) -> void:
 		attack_value = move_toward(attack_value, 0, 0.05)
 		
 	animation_tree.set("parameters/AttackLayer/blend_amount", attack_value)
-	print(attack_value)
-	
 	
 func create_speed_modifier(s : float, d : float):
 	var modifier = SpeedModifier.new()
