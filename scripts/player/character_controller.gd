@@ -3,6 +3,10 @@ extends CharacterBody3D
 @export var speed = 3
 @export var friction = 0.02
 @export var acceleration = 0.01
+@export var dash_strength = 10
+@export var dash_cooldown = 1
+
+var _dash_cooldown = 0
 
 func get_input():
 	var input = Vector2()
@@ -36,6 +40,9 @@ func get_mouse_3d_position() -> Vector3:
 		# Fallback to ray end if no intersection
 		return ray_end
 
+func dash():
+	pass
+
 func _physics_process(delta):
 	# Apply movement
 	var direction = get_input()
@@ -43,10 +50,20 @@ func _physics_process(delta):
 		velocity = velocity.lerp(Vector3(direction.normalized().x,0,direction.normalized().y) * speed,1 - pow(acceleration,delta))
 	else:
 		velocity = velocity.lerp(Vector3.ZERO,1-pow( friction,delta))
+		
 	# Look at mouse position
 	var mouse_position = get_mouse_3d_position()
 	look_at(mouse_position)
 	rotation.x = 0
 	rotation.z = 0
+	
+	# Apply dash
+	if Input.is_action_pressed('dash') and _dash_cooldown <= 0:
+		$CPUParticles3D.restart()
+		velocity = velocity - get_global_transform().basis.z * dash_strength
+		_dash_cooldown = dash_cooldown
+	_dash_cooldown -= delta
+	
+	# Apply gravity
 	velocity += get_gravity() * delta
 	move_and_slide()

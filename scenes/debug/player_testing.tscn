@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bmtgju1evgvpr" path="res://scripts/debug/autonav.gd" id="1_bhs8y"]
 [ext_resource type="PackedScene" uid="uid://dwm3x750j20bp" path="res://scenes/npc/human.tscn" id="2_40bn3"]
+[ext_resource type="Script" uid="uid://cjx11bu5mf3wy" path="res://scripts/player/camera_controller.gd" id="3_40bn3"]
 [ext_resource type="PackedScene" uid="uid://cqhbxmc5mdr7g" path="res://scenes/player/player_controller.tscn" id="3_bhs8y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a02cp"]
@@ -96,10 +97,10 @@ shape = SubResource("ConcavePolygonShape3D_go701")
 
 [node name="Human" parent="." unique_id=1742445246 instance=ExtResource("2_40bn3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.5245697, -2)
-CurrentState = 0
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1614889783]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 18, 0)
 
 [node name="TestPlayer" parent="." unique_id=1025771593 instance=ExtResource("3_bhs8y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034027576, 1.5, 0.13150644)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1614889783]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 18, 0)
+script = ExtResource("3_40bn3")
