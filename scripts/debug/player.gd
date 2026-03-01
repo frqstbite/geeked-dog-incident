@@ -33,6 +33,10 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	if !alive:
 		return
+		
+	if RoundManager.geek_value <= 0:
+		kill_player()
+		return
 	
 	# Add the gravity.
 	if not is_on_floor():

@@ -41,8 +41,9 @@ script = ExtResource("1_khaq0")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.73130417, -0.1559143)
 shape = SubResource("CapsuleShape3D_khaq0")
 
-[node name="Body" parent="." unique_id=589952143 instance=ExtResource("2_n2gxi")]
+[node name="Body" parent="." unique_id=589952143 node_paths=PackedStringArray("smoke_particles") instance=ExtResource("2_n2gxi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+smoke_particles = NodePath("SmokeParticles")
 
 [node name="AttackArea" type="Area3D" parent="Body" unique_id=2057348381]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.9686765e-08, 1.329004, 0.95252347)

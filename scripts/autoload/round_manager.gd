@@ -13,8 +13,6 @@ const E = exp(1)
 func _process(delta: float) -> void:
 	if geek_value > 0:
 		geek_value = lerpf(original_geek_value, 0, time_elapsed) + amount_refilled
-	if geek_value <= 0:
-		kill_player()
 	
 	time_elapsed += delta * geek_decay
 	
@@ -24,7 +22,8 @@ func refill_geek(amount):
 	amount_refilled += amount
 
 func kill_player():
+	await get_tree().create_timer(2.0).timeout
 	time_elapsed = 0
 	geek_value = original_geek_value
 	amount_refilled = 0
-	#get_tree().reload_current_scene.call_deferred()
+	get_tree().reload_current_scene.call_deferred()
